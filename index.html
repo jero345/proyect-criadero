@@ -28,8 +28,82 @@
       <link rel="stylesheet" href="vendor/layerslider/css/layerslider.css">
       <!-- Color Style CSS -->
       <link href="styles/maincolors.css" rel="stylesheet">
-    
+     
+       
    </head>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Botón de WhatsApp</title>
+      <style>
+          /* Botón de WhatsApp */
+          .btn-whatsapp {
+              position: fixed;
+              z-index: 999;
+              bottom: 17vh; /* Ajustado para que esté encima del botón de subir */
+              right: 20px;
+          }
+  
+          .btn-whatsapp:before,
+          .btn-whatsapp:after {
+              content: "";
+              position: absolute;
+              top: 2px;
+              left: 4px;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-color: #00e676;
+              opacity: 0;
+              animation: onda 1.7s infinite;
+          }
+  
+          .btn-whatsapp:before {
+              animation-delay: 1s;
+          }
+  
+          .btn-whatsapp:after {
+              animation-delay: 1.3s;
+          }
+  
+          .btn-whatsapp img {
+         
+              z-index: 2;
+          }
+  
+          @keyframes onda {
+              0% {
+                  transform: scale(1);
+              }
+  
+              15% {
+                  opacity: 1;
+              }
+  
+              100% {
+                  opacity: 0;
+                  transform: scale(2.5);
+              }
+          }
+  
+      </style>
+  </head>
+  <body>
+      <!-- Botón de WhatsApp -->
+      <a href="https://api.whatsapp.com/send?phone=573052583835&text=Hola%20Bocaditos%20T%26T%2C%20quiero%20hacer%20mi%20pedido!" class="btn-whatsapp">
+          <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+      </a>
+  
+      <!-- Botón de subir -->
+      <div class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+          <img src="./img/icon-up.svg" alt="Subir">
+      </div>
+  </body>
+  <body>
+      <a href="https://api.whatsapp.com/send?phone=573052583835&text=Hola%20Bocaditos%20T%26T%2C%20quiero%20hacer%20mi%20pedido!" class="btn-whatsapp">
+          <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+      </a>
+  </body>
    <body id="page-top">
       <!-- Preloader -->
       <div id="preloader">
@@ -37,78 +111,155 @@
             <div class="bounce1"></div>
          </div>
       </div>
+      
       <!-- Preloader ends -->
       <a href="" class="close-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       </a>
       <nav class="navbar navbar-expand-xl navbar-custom fixed-top p-0">
          <style>
-            .navbar-custom {
-               background-color: #108896!important; /* Cambia el color de fondo */
-               border: none;
-            }
-            .navbar-custom .nav-link {
-               color: #ffffff !important; /* Cambia el color de los enlaces */
-            }
-            .navbar-custom .nav-link:hover {
-               color: #cce4ff !important; /* Cambia el color al pasar el cursor */
-            }
-            .navbar-brand img {
-               max-height: 100%; /* Ajusta la altura del logo si es necesario */
-            }
-         </style>
-         <div class="container">
-            <div class="navbar-brand navbar-brand-centered page-scroll">
-               <a href="index-layerslider2.html">
-                  <!-- logo  -->
-                  <img src="img/logo pnsa.png" class="img-responsive" alt="">
-               </a>
-            </div>
-            <!-- Hamburger menu -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-               <i class="fas fa-bars"></i>
-            </button>
-            <!-- /Hamburger menu -->
-            <div class="collapse navbar-collapse" id="navbar">
-               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Inicio
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     </ul>
-                  </li>
-                  <li class="nav-item">
-                  </li>
-                  <li class="nav-item dropdown">
-                    
-                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                        <li class="dropdown-item"> <a href="adoption.html">Adoption</a></li>
-                        <li class="dropdown-item"><a href="adopt-single.html">Adoption Single</a></li>
-                        <li class="dropdown-item"><a href="services.html">Our Services</a></li>
-                        <li class="dropdown-item"><a href="services-single.html">Services Single</a></li>
-                        <li class="dropdown-item"><a href="team.html">Our Team</a></li>
-                        <li class="dropdown-item"><a href="pricing.html">Pricing</a></li>
-                        <li class="dropdown-item"><a href="testimonials.html">Testimonials</a></li>
-                        <li class="dropdown-item"><a href="elements.html">Elements</a></li>
-                     </ul>
-                  </li>
-               </ul>
-               <ul class="navbar-nav navbar-right">
-                  <li class="nav-item">
-                  </li>
-                  <li class="nav-item dropdown">
-                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+             .navbar-custom {
+                 background-color: #0b6059 !important; /* Cambia el color de fondo */
+                 border: none;
+             }
+             .navbar-custom .nav-link {
+                 color: #ffffff !important; /* Cambia el color de los enlaces */
+                 padding: 10px 15px;
+             }
+             .navbar-custom .nav-link:hover {
+                 color: #cce4ff !important; /* Cambia el color al pasar el cursor */
+             }
+             .navbar-brand img {
+                 max-height: 100%; /* Ajusta la altura del logo si es necesario */
+             }
+     
+             /* Estilos para los iconos de redes sociales */
+             .social-icons {
+                 display: flex;
+                 align-items: center;
+                 gap: 15px; /* Espaciado entre íconos */
+             }
+             .social-icons i {
+        color: #ffffff !important; /* Asegura que el color sea #4B4B4B */
+        font-size: 24px; /* Tamaño del ícono */
+        transition: color 0.3s ease, transform 0.3s ease; /* Transición para hover */
+    }
 
-                     </ul>
-                  </li>
-                 
-               </ul>
-            </div>
+    .social-icons i:hover {
+        color: #ffffff !important; /* Cambia a azul claro al pasar el cursor */
+        transform: scale(1.2); /* Efecto de aumento */
+    }
+         </style>
+         
+         <div class="container">
+             <!-- Logo -->
+             <div class="navbar-brand navbar-brand-centered page-scroll">
+                 <a href="index-layerslider2.html">
+                     <img src="img/logo pnsa.png" class="img-responsive" alt="Logo">
+                 </a>
+             </div>
+     
+             <!-- Menú hamburguesa -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+     
+             <!-- Menú de navegación -->
+             <div class="collapse navbar-collapse" id="navbar">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <!-- Enlace "Inicio" -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="./index.html">Inicio</a>
+                     </li>
+                     <!-- Enlace "Acerca de nosotros" -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="./about.html">Acerca de nosotros</a>
+                     </li>
+                     <!-- Enlace "Preguntas frecuentes" -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="./faq.html">Preguntas frecuentes</a>
+                     </li>
+                 </ul>
+     
+                 <!-- Iconos de redes sociales -->
+                 <div class="social-icons">
+                  <a href="https://twitter.com" title="Twitter" target="_blank">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://facebook.com" title="Facebook" target="_blank">
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://instagram.com" title="Instagram" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
          </div>
-      </nav>
-      
-      <!-- /navbar ends -->
-      <!-- ==== Slider ==== -->
+     </nav>
+     
+
+<style>
+    /* Eliminar el color de fondo naranja por defecto (activo y visitado) */
+    .navbar-nav .nav-link {
+        background-color: #0b6059;  /* Color de fondo gris por defecto */
+        color: black; /* Color del texto */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    }
+
+    /* Efecto hover para los enlaces */
+    .navbar-nav .nav-link:hover {
+        background-color: #4B4B4B;  /* Color de fondo más oscuro al hacer hover */
+        color: white;  /* Color del texto a blanco en hover */
+    }
+
+    /* Asegurarse de que el color de fondo no cambie cuando el enlace esté activo */
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link:focus {
+        background-color: #0b6059;  /* Mantener el fondo gris cuando está activo o enfocado */
+        color: black;  /* Mantener el texto negro */
+    }
+
+    /* Estilos para centrar la frase en el slider */
+    .header-wrapper {
+        display: flex;
+        justify-content: center;  /* Centrado horizontal */
+        align-items: center;      /* Centrado vertical */
+        height: 100%;             /* Aseguramos que el contenedor ocupe toda la altura disponible */
+    }
+
+    .header-text {
+        text-align: center; /* Centrado del texto */
+    }
+</style>
+
+<style>
+   /* Para centrar completamente el texto */
+   .header-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centra el contenido */
+      text-align: center;
+      width: 100%; /* Ocupa todo el ancho del slider */
+      height: 100%; /* Opcional si necesitas asegurarte de la altura completa */
+   }
+   
+   .header-text {
+      color: white; /* Ajusta el color del texto */
+      font-size: 13px /* Tamaño del texto ajustable */
+   }
+   .btn-primary {
+            background-color: #0b6059; /* Color gris */
+            color: white; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno */
+            text-decoration: none; /* Quitar subrayado */
+            border-radius: 5px; /* Bordes redondeados */
+            display: inline-block; /* Para mantenerlo como botón */
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+        .btn-primary:hover {
+            background-color: #0b6059; /* Color verde al pasar el cursor */
+        }
+   </style>
+
+  <!-- ==== Slider ==== -->
       <div class="container-fluid p-0">
          <div id="slider" class="overlay-left" style="width:1200px;height:700px;margin:0 auto;margin-bottom: 0px;">
             <!-- Slide 1 -->
@@ -118,11 +269,12 @@
                <!-- text  -->
                <div class="ls-l header-wrapper" data-ls="durationin:2400;durationout:1400;scalexin:1.5; scaleyin:1.5; scalexout:.7; scaleyout:.7;">
                   <div class="header-text text-light text-left">
-                     <h1>Bienvenidos a Criadero Kingdog</h1>
+                     <h1>Venta de cachorros de raza pura en Colombia</h1>
                      <!--the div below is hidden on small screens  -->
                      <div class="d-none d-lg-block">
-                        <p class="header-p">"Criando amigos fieles, uno a la vez."</p>
-                        <a class="btn btn-primary " href="contact.html">Contact us</a>
+                        <p class="header-p">": Más de 14 años enfocados en una crianza responsable y cachorros de raza pura con certificación de calidad en Colombia.
+                           "</p>
+                        <a class="btn btn-primary " href="contact.html">Contactanos</a>
                      </div>
                      <!--/d-none  -->
                   </div>
@@ -131,10 +283,37 @@
                <!-- ls-l  -->
             </div>
             <!-- ls-slide -->
+             
+     
+
+            <!-- ls-slide -->
+            <!-- Slide 3 -->
+            <div class="ls-slide" data-ls="duration:8000; transition2d:3;kenburnszoom:out; kenburnsscale:1.2;">
+               <!-- bg image  -->
+               <img src="img/Pomerania.jpg" class="ls-bg" alt="" >
+               <!-- text  -->
+               <div class="ls-l header-wrapper" data-ls="durationin:2400;durationout:1400;scalexin:1.5; scaleyin:1.5; scalexout:.7; scaleyout:.7;">
+                  <div class="header-text text-light text-left">
+                     <h1> Descubre nuestras razas disponibles</h1>
+                     <!--the div below is hidden on small screens  -->
+                     <div class="d-none d-lg-block">
+                        <p class="header-p"> Desde las razas más pequeñas hasta las más grandes, encuentra tu cachorro de raza pura ideal para tu hogar en King Dog.
+                        </p>
+                        <a class="btn btn-primary " href="contact.html">Contactanos</a>
+                     </div>
+                     <!--/d-none  -->
+                  </div>
+                  <!-- header-text  -->
+               </div>
+               <!-- ls-l  -->
+            </div>
+            <!-- ls-slide -->
+         </div>
+         <!-- /slider -->
             <!-- Slide 2 -->
             <div class="ls-slide" data-ls="duration:8000; transition2d:3;kenburnszoom:in; kenburnsscale:1.2;">
                <!-- bg image  -->
-               <img src="img/Pomsky.jpg" class="ls-bg" alt="" >
+               <img src="img/Husky.jpg" class="ls-bg" alt="" >
                <!-- text  -->
                <div class="ls-l header-wrapper" data-ls="durationin:2400;durationout:1400;scalexin:1.5; scaleyin:1.5; scalexout:.7; scaleyout:.7;">
                   <div class="header-text text-light text-left">
@@ -154,7 +333,7 @@
             <!-- Slide 3 -->
             <div class="ls-slide" data-ls="duration:8000; transition2d:3;kenburnszoom:out; kenburnsscale:1.2;">
                <!-- bg image  -->
-               <img src="img/Pomerania.jpg" class="ls-bg" alt="" >
+               <img src="img/Husky.jpg" class="ls-bg" alt="" >
                <!-- text  -->
                <div class="ls-l header-wrapper" data-ls="durationin:2400;durationout:1400;scalexin:1.5; scaleyin:1.5; scalexout:.7; scaleyout:.7;">
                   <div class="header-text text-light text-left">
@@ -174,17 +353,32 @@
          </div>
          <!-- /slider -->
       </div>
+      </div>
+
+   
       <!-- /container-fluid -->   
       <!-- Section Services-index -->
       <section id="services-index">
          <!-- container -->
-         <div class="container">
+         <style>
+            /* Estilo para cambiar el color del texto */
+            .section-heading h2 {
+              color: #0b6059;
+            }
+          </style>
+        </head>
+        <body>
+        
+          <!-- container -->
+          <div class="container">
             <div class="section-heading">
-               <h2>¿Porque Elegirnos?</h2>
+              <h2>¿Por qué elegir el criadero King Dog?</h2>
             </div>
+          </div>
             <!-- /section-heading-->
             <div class="col-lg-10 offset-lg-1 text-center">
-               <p>"Soluciones diseñadas para atender las necesidades de tus mascotas con calidad y cuidado."
+               <p>"En Criadero King Dog, nos destacamos por ofrecer un servicio exclusivo y de alta calidad, donde la salud, la pureza y el bienestar de nuestros cachorros son nuestra prioridad. Estas son las razones por las que somos la mejor opción para adquirir tu cachorro de raza pura en Colombia:
+                  ."
                </p>
             </div>
             <!-- /col-lg-->
@@ -202,15 +396,15 @@
                            <div class="icon">
                               <!-- icon -->
                               <div class="image">
-                                 <img src="img/certificado.png" class="img-fluid" alt="">
+                                 <img src="img/vacunacion.png" class="img-fluid" alt="">
                               </div>
                               <div class="info">
-                                 <h4>certificado de salud y pureza</h4>
-                                 <p>En nuestro criadero respaldamos nuestros cachorros ,cubriendo 8 días por enfermedades virales tales como : parvovirus moquillo o hepatitis 
-
-                                    Este documento proporciona a los compradores la tranquilidad de que están adquiriendo un animal saludable , con su linaje auténtico y cumpliendo con los estándares únicos de cada perro de raza.</p>
+                                 <h4> Cachorros con Certificado de Salud
+                                 </h4>
+                                 <p>
+                                 </p>
                                  <!-- Button-->
-                                
+                                 <a class="btn" href="services-single.html" style="background-color: #0b6059; color: #ffffff; border: none; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center;">Conoce mas</a>
 
                               </div>
                            </div>
@@ -224,13 +418,13 @@
                            <div class="icon">
                               <!-- icon -->
                               <div class="image">
-                                 <img src="img/historial-medico.png" class="img-fluid" alt="">
+                                 <img src="img/calidad.png" class="img-fluid" alt="">
                               </div>
                               <div class="info">
-                                 <h4>Historial completo de vacunación </h4>
-                                 <p>Este historial se entrega junto con el cachorro, para que los compradores de nuestros cachorros tengan un registro completo de la salud del animal, asegurando que todos los protocolos de vacunación necesarios han sido seguidos en nuestro criadero canino ,independientemente de la edad correspondiente al momento de la entrega</p>
+                                 <h4>Garantía de Pureza de Por Vida</h4>
+                                 <p></p>
                                  <!-- Button-->
-                                
+                                 <a class="btn" href="services-single.html" style="background-color: #0b6059; color: #ffffff; border: none; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center;">Conoce mas</a>
 
                               </div>
                            </div>
@@ -244,13 +438,36 @@
                            <div class="icon">
                               <!-- icon -->
                               <div class="image">
-                                 <img src="img/clasificacion.png" class="img-fluid" alt="">
+                                 <img src="img/consulta.png" class="img-fluid" alt="">
                               </div>
                               <div class="info">
-                                 <h4>Recomendaciones detalladas sobre cuidado  </h4>
-                                 <p>En nuestro criadero de perros King Dog proporcionamos esta guía a nuestros clientes , donde podrás obtener las indicaciones básicas para cuidar la integridad y salud de tu nuevo amigo fiel al llegar a casa</p>
-                                 <!-- Button-->
+                                 <h4>Asesoría Personalizada y Postventa</h4>
+                                 <p>
+                                 </p>
+                                 <a class="btn" href="services-single.html" style="background-color: #0b6059; color: #ffffff; border: none; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center;">Conoce mas</a>
                                 
+
+                              </div>
+                           </div>
+                        </div>
+
+                        
+                        <!-- /box_icon -->
+                     </div>
+                     <!-- /col-12 ends -->
+                     <!-- Feature Box 4  -->
+                     <div class="col-12">
+                        <div class="box_icon m-3">
+                           <div class="icon">
+                              <!-- icon -->
+                              <div class="image">
+                                 <img src="img/perro.png" class="img-fluid" alt="">
+                              </div>
+                              <div class="info">
+                                 <h4>	Carnet de Vacunación Incluido</h4>
+                                 <p></p>
+                                 <!-- Button-->
+                                 <a class="btn" href="services-single.html" style="background-color: #0b6059; color: #ffffff; border: none; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center;">Conoce mas</a>
 
                               </div>
                            </div>
@@ -258,11 +475,23 @@
                         <!-- /box_icon -->
                      </div>
                      <!-- /col-12 ends -->
-                     <!-- Feature Box 4  -->
-                        <!-- /box_icon -->
-                     </div>
-                     <!-- /col-12 ends -->
                      <!-- Feature Box 5  -->
+                     <div class="col-12">
+                        <div class="box_icon m-3">
+                           <div class="icon">
+                              <!-- icon -->
+                              <div class="image">
+                                 <img src="img/alimentos-para-mascotas.png" class="img-fluid" alt="">
+                              </div>
+                              <div class="info">
+                                 <h4>Kit Inicial para Tu Cachorro</h4>
+                                 <p></p>
+                                 <!-- Button-->
+                                
+                                 <a class="btn" href="services-single.html" style="background-color: #0b6059; color: #ffffff; border: none; padding: 10px 20px; text-decoration: none; display: inline-block; text-align: center;">Conoce mas</a>
+                              </div>
+                           </div>
+                        </div>
                         <!-- /box_icon -->
                      </div>
                      <!-- /col-12 ends -->
@@ -276,25 +505,47 @@
          <!-- /container-fluid-->
       </section>
         <!-- Heading -->
-<section id="adoption" class="pages">
-   <div class="jumbotron"  
-        style="background-image: url('https://fotografias.antena3.com/clipping/cmsimages01/2021/06/16/17E9635D-51B2-4235-A1EE-22E7647E8CFF/98.jpg?crop=910,512,x58,y0&width=1900&height=1069&optimize=low&format=webply'); 
-               background-size: cover; 
-               background-position: center;" 
-        data-center="background-position: 50% 0px;" 
-        data-top-bottom="background-position: 50% -80px;" 
-        data-bottom-top="background-position: 50% 80px;">
-       <!-- Heading -->
-       <div class="jumbo-heading">
-           <h1>Nuestros cachorros</h1>
-       </div>
-       <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum iure, nostrum provident velit maxime dolor quibusdam soluta aliquam vero fuga numquam debitis maiores quas repellendus possimus veritatis ad nihil error?</h2>
-   </div>
+        <style>
+         .letrero {
+           background-color: #0b6059; /* Color de fondo */
+           color: white; /* Color del texto */
+           font-size: 18px; /* Tamaño de la fuente */
+           font-weight: bold; /* Negrita */
+           padding: 15px 30px; /* Espaciado interno */
+           border-radius: 8px; /* Bordes redondeados suaves */
+           display: inline-block; /* Permite que el elemento se ajuste al contenido */
+           text-align: center; /* Alineación del texto */
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+           transition: all 0.3s ease; /* Transición suave */
+         }
+     
+         /* Efecto cuando el usuario pasa el ratón sobre el letrero */
+         .letrero:hover {
+           background-color: #084c44; /* Color más oscuro para el hover */
+           cursor: pointer; /* Cambiar el cursor */
+         }
+       </style>
+     </head>
+     <body>
+     
 </section>
+<h2 class="centered-title">Bienvenidos a Criadero King Dog</h2>
+
+<style>
+    /* Estilo para centrar el título */
+    .centered-title {
+        text-align: center; /* Centra horizontalmente */
+        display: flex; /* Necesario para centrado vertical */
+        align-items: center; /* Centra verticalmente */
+        justify-content: center; /* Centra horizontalmente */
+        font-size: 2rem; /* Tamaño de la fuente ajustable */
+        color: #0b6059; /* Color del texto */
+    }
+</style>
 <style>
    /* Estilo para los nav-pills */
    .nav-pills .nav-link {
-       background-color: #108896 !important; /* Fondo predeterminado */
+       background-color: #0b6059!important; /* Fondo predeterminado */
        color: #ffffff !important; /* Color del texto */
        border-radius: 0; /* Eliminar bordes redondeados */
        margin-right: 5px; /* Espaciado entre botones */
@@ -309,20 +560,20 @@
 
    /* Estado Activo */
    .nav-pills .nav-link.active {
-       background-color: #108896 !important; /* Fondo activo */
+       background-color: #0b6059!important; /* Fondo activo */
        color: #ffffff !important; /* Color del texto activo */
-       border-color: #108896 !important; /* Bordes activos (opcional) */
+       border-color: #0b6059!important; /* Bordes activos (opcional) */
    }
 
    /* Estado Activo al pasar el cursor */
    .nav-pills .nav-link.active:hover {
-       background-color: #4B4B4B !important; /* Fondo activo al pasar el cursor */
+       background-color: #0b6059 !important; /* Fondo activo al pasar el cursor */
        color: #ffffff !important; /* Color del texto activo al pasar el cursor */
    }
 
    /* Estilo para los botones personalizados */
    .btn-custom {
-       background-color: #108896 !important; /* Fondo del botón */
+       background-color: #0b6059 !important; /* Fondo del botón */
        color: #ffffff !important; /* Color del texto */
        border: none !important; /* Eliminar borde */
        transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
@@ -423,7 +674,7 @@
   
       /* Estado Hover para el botón */
       .btn-custom-action:hover {
-          background-color: #108896 !important; /* Fondo al pasar el cursor */
+          background-color: #0b6059!important; /* Fondo al pasar el cursor */
           color: #ffffff !important;            /* Color del texto al pasar el cursor */
       }
   </style>
@@ -434,12 +685,12 @@
            <!-- Image 1 -->
            <div class="col-lg-4 adoption-item pequeña">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/criadero de cocker spaniel.jpg" alt="Cocker Spaniel"> 
+                   <img class="img-fluid rounded-circle" src="img/Pomerania.jpg" alt="Cocker Spaniel"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Cocker Spaniel</h4>
+                       <h4>pomerania</h4>
                        <p></p>
-                       <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                       <a class="btn btn-custom-action" href="adopt-single pomerania.html">Más información</a>
                    </div>
                </div>
            </div>
@@ -448,24 +699,73 @@
            <!-- Image 2 -->
            <div class="col-lg-4 adoption-item mediana">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/ciadero de shih tzu (1).jpg" alt="Shih Tzu"> 
+                   <img class="img-fluid rounded-circle" src="img/criadero de cocker spaniel.jpg" alt="Shih Tzu"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Shih Tzu</h4>
+                       <h4>Cocker spaniel </h4>
                        <p></p>
                        <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
                    </div>
                </div>
            </div>
+
+           <div class="col-lg-4 adoption-item mediana">
+            <div class="adoption-thumb">
+                <img class="img-fluid rounded-circle" src="img/Border collie .jpg" alt="Shih Tzu"> 
+                <!-- header-->							  
+                <div class="adopt-header">
+                    <h4>Border collie </h4>
+                    <p></p>
+                    <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                </div>
+            </div>
+        </div>
            <!-- col-lg-->
+           <div class="col-lg-4 adoption-item mediana">
+            <div class="adoption-thumb">
+                <img class="img-fluid rounded-circle" src="img/criadero beagle.jpg" alt="Shih Tzu"> 
+                <!-- header-->							  
+                <div class="adopt-header">
+                    <h4>Beagle </h4>
+                    <p></p>
+                    <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                </div>
+            </div>
+        </div>
+
+             <!-- col-lg-->
+             <div class="col-lg-4 adoption-item mediana">
+               <div class="adoption-thumb">
+                   <img class="img-fluid rounded-circle" src="img/criadero pastor ovejero australiano.webp" alt="Shih Tzu"> 
+                   <!-- header-->							  
+                   <div class="adopt-header">
+                       <h4>Pastor ganadero australiano</h4>
+                       <p></p>
+                       <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                   </div>
+               </div>
+           </div>
+
+             <!-- col-lg-->
+             <div class="col-lg-4 adoption-item mediana">
+               <div class="adoption-thumb">
+                   <img class="img-fluid rounded-circle" src="img/criadero Bulldog ingles.webp" alt="Shih Tzu"> 
+                   <!-- header-->							  
+                   <div class="adopt-header">
+                       <h4>Bulldog inglés </h4>
+                       <p></p>
+                       <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                   </div>
+               </div>
+           </div>
 
            <!-- Image 3 -->
            <div class="col-lg-4 adoption-item mediana">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/Yorkshire.png" alt="Yorkshire"> 
+                   <img class="img-fluid rounded-circle" src="img/criadero bulldog frances.jpg" alt="Yorkshire"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Yorkshire</h4>
+                       <h4>Bulldog francés </h4>
                        <p></p>
                        <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
                    </div>
@@ -476,10 +776,10 @@
            <!-- Image 4 -->
            <div class="col-lg-4 adoption-item grande">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/criadero dalmata.webp" alt="Dálmata"> 
+                   <img class="img-fluid rounded-circle" src="img/criadero Golden retriever.jpg" alt="Dálmata"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Dálmata</h4>
+                       <h4>Golden Retriever </h4>
                        <p></p>
                        <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
                    </div>
@@ -487,15 +787,66 @@
            </div>
            <!-- col-lg-4 -->
 
+
+           <div class="col-lg-4 adoption-item grande">
+            <div class="adoption-thumb">
+                <img class="img-fluid rounded-circle" src="img/criadero rottweiler.webp" alt="Dálmata"> 
+                <!-- header-->							  
+                <div class="adopt-header">
+                    <h4>Rottweiler  </h4>
+                    <p></p>
+                    <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 adoption-item grande">
+         <div class="adoption-thumb">
+             <img class="img-fluid rounded-circle" src="img/criadero Pastor belga.jpg" alt="Dálmata"> 
+             <!-- header-->							  
+             <div class="adopt-header">
+                 <h4>Pastor belga </h4>
+                 <p></p>
+                 <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+             </div>
+         </div>
+     </div>
+
+
+  <div class="col-lg-4 adoption-item grande">
+   <div class="adoption-thumb">
+       <img class="img-fluid rounded-circle" src="img/criadero doberman.webp" alt="Dálmata"> 
+       <!-- header-->							  
+       <div class="adopt-header">
+           <h4>Doberman </h4>
+           <p></p>
+           <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+       </div>
+   </div>
+</div>
+
+<div class="col-lg-4 adoption-item grande">
+   <div class="adoption-thumb">
+       <img class="img-fluid rounded-circle" src="img/Husky.jpg" alt="Dálmata"> 
+       <!-- header-->							  
+       <div class="adopt-header">
+           <h4>Husky siberiano</h4>
+           <p></p>
+           <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+       </div>
+   </div>
+</div>
+
+
            <!-- Image 5 -->
            <div class="col-lg-4 adoption-item pequeña">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/criadero bulldog frances.jpg" alt="Susu"> 
+                   <img class="img-fluid rounded-circle" src="img/Yorkshire.png" alt="Susu"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Bull dog Francees</h4>
+                       <h4>Yorkshire</h4>
                        <p></p>
-                       <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                       <a class="btn btn-custom-action" href="yorkshire.html">Más información</a>
                    </div>
                </div>
            </div>
@@ -504,12 +855,12 @@
            <!-- Image 6 -->
            <div class="col-lg-4 adoption-item pequeña">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/Yorkshire.png" alt="Ava"> 
+                   <img class="img-fluid rounded-circle" src="img/ciadero de shih tzu (1).jpg" alt="Ava"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Yorkshire</h4>
+                       <h4>Shih Tzu </h4>
                        <p></p>
-                       <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                       <a class="btn btn-custom-action" href="shitzu.html">Más información</a>
                    </div>
                </div>
            </div>
@@ -518,26 +869,54 @@
            <!-- Image 7 -->
            <div class="col-lg-4 adoption-item pequeña">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/criadero pinscher (1).webp" alt="Lily"> 
+                   <img class="img-fluid rounded-circle" src="img/criadero teckel.jpg" alt="Lily"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Pinscher
+                       <h4>Salchicha Teckel 
                      </h4>
                        <p></p>
-                       <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
+                       <a class="btn btn-custom-action" href="salchicha.html">Más información</a>
                    </div>
                </div>
            </div>
            <!-- col-lg-4 -->
 
+            <!-- Image 7 -->
+            <div class="col-lg-4 adoption-item pequeña">
+               <div class="adoption-thumb">
+                   <img class="img-fluid rounded-circle" src="img/Criadero Jack Russell .jpeg"  alt="Lily"> 
+                   <!-- header-->							  
+                   <div class="adopt-header">
+                       <h4>Jack Russell 
+                     </h4>
+                       <p></p>
+                       <a class="btn btn-custom-action" href="jack russel.html">Más información</a>
+                   </div>
+               </div>
+           </div>
+ <!-- Image 9 -->
+
+           <div class="col-lg-4 adoption-item pequeña">
+            <div class="adoption-thumb">
+                <img class="img-fluid rounded-circle" src="img/criadero pinscher (1).webp"  alt="Lily"> 
+                <!-- header-->							  
+                <div class="adopt-header">
+                    <h4>Pinscher
+                  </h4>
+                    <p></p>
+                    <a class="btn btn-custom-action" href="pinscher.html">Más información</a>
+                </div>
+            </div>
+        </div>
+
            <!-- Image 8 -->
            <div class="col-lg-4 adoption-item grande">
                <div class="adoption-thumb">
-                   <img class="img-fluid rounded-circle" src="img/adopt8.jpg" alt="Douggie"> 
+                   <img class="img-fluid rounded-circle" src="img/criadero pastor aleman.webp" alt="Douggie"> 
                    <!-- header-->							  
                    <div class="adopt-header">
-                       <h4>Douggie</h4>
-                       <p>Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. Lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</p>
+                       <h4>Pastor alemán </h4>
+                       <p></p>
                        <a class="btn btn-custom-action" href="adopt-single.html">Más información</a>
                    </div>
                </div>
@@ -550,236 +929,209 @@
 </div>
 <!-- /row--> 
 
-      <!-- Section Newsletter -->
+<style>
+    /* Estilo para el contenedor del botón */
+    h2 {
+        text-align: center; /* Centrar el texto */
+        margin: 20px 0;
+    }
+
+    /* Estilo del botón */
+    h2 button {
+        background-color: #4B4B4B  ; /* Fondo azul */
+        color: white; /* Texto blanco */
+        font-size: 1.2rem; /* Tamaño del texto */
+        font-weight: bold; /* Texto en negrita */
+        padding: 10px 20px; /* Espaciado interno */
+        border: none; /* Sin bordes */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambiar el cursor al pasar */
+        transition: all 0.3s ease; /* Transición suave */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+
+    /* Efecto hover */
+    h2 button:hover {
+        background-color: #0b6059; /* Fondo más oscuro */
+        transform: translateY(-3px); /* Efecto de elevación */
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+    }
+
+    /* Efecto activo */
+    h2 button:active {
+        transform: translateY(0); /* Restablecer elevación */
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+    }
+</style>
+</head>
+<body>
+    <h2 style="text-align: center;">
+        <a href="tu-archivo.pdf" target="_blank">
+            <button>Observa todo nuestro amplio catálogo</button>
+        </a>
+    </h2>
+</body>
+
+      <div class="stats-section">
+         <h2 class="stats-title">Nuestras Estadísticas</h2>
+         <div class="stats-container">
+             <!-- Contador 1 -->
+             <div class="stat">
+                 <span class="stat-number" id="stat1">1000</span>
+                 <span class="stat-label">Hogares Felices</span>
+             </div>
+             <!-- Contador 2 -->
+             <div class="stat">
+                 <span class="stat-number" id="stat2">2</span>
+                 <span class="stat-label">Profesionales</span>
+             </div>
+         </div>
+     </div>
      
-      <!-- Section Reviews -->
-      <section id="reviews">
-         <div class="container">
-            <div class="section-heading text-center">
-               <h2>Clients Reviews</h2>
-            </div>
-            <!-- Parallax object -->
-            <div class="parallax-object2 hidden-sm d-none d-lg-block hidden-md" 
-               data-100-start="transform:rotate(-0deg); left:20%;" 
-               data-top-bottom="transform:rotate(-370deg);">
-               <!-- Image -->
-               <img src="img/illustrations/toy.png" alt="">
-            </div>
-            <!-- parallax -->
-            <div class="col-lg-9 offset-lg-3">
-               <!-- Reviews -->
-               <div class="slider-3 mt-5 p-2">
-                  <!-- review 1 -->
-                  <div class="review">
-                     <div class="col-12 p-3">
-                        <!-- caption -->
-                        <div class="review-caption">
-                           <h5>Sue Shei</h5>
-                           <div class="small-heading">
-                              Dog Lover
-                           </div>
-                           <blockquote>
-                              Patatemp dolupta orem retibusam qui commolu 
-                              Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, 
-                              vest ibulum orci eget, viverra.
-                           </blockquote>
-                        </div>
-                        <!-- Profile image -->
-                        <div class="review-profile-image">
-                           <img src="img/review1.jpg" alt="" >
-                        </div>
-                        <!--/review profile image -->
-                     </div>
-                     <!-- /col-12 ends -->
-                  </div>
-                  <!-- /review-->
-                  <!-- review 2 -->
-                  <div class="review">
-                     <div class="col-12 p-3">
-                        <!-- caption -->
-                        <div class="review-caption">
-                           <h5>Jonas Smith</h5>
-                           <div class="small-heading">
-                              Cat Specialist
-                           </div>
-                           <blockquote>
-                              Patatemp dolupta orem retibusam qui commolu 
-                              Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, 
-                              vest ibulum orci eget, viverra.
-                           </blockquote>
-                        </div>
-                        <!-- Profile image -->
-                        <div class="review-profile-image">
-                           <img src="img/review2.jpg" alt="" >                      
-                        </div>
-                        <!--/review profile image -->
-                     </div>
-                     <!-- /col-12 ends -->
-                  </div>
-                  <!-- /review-->
-                  <!-- review 3 -->
-                  <div class="review">
-                     <div class="col-12 p-3">
-                        <!-- caption -->
-                        <div class="review-caption">
-                           <h5>Maria Silva</h5>
-                           <div class="small-heading">
-                              Exotic Birds Vet
-                           </div>
-                           <blockquote>
-                              Patatemp dolupta orem retibusam qui commolu 
-                              Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, 
-                              vest ibulum orci eget, viverra.
-                           </blockquote>
-                        </div>
-                        <!-- Profile image -->
-                        <div class="review-profile-image">
-                           <img src="img/review3.jpg" alt="" >                       
-                        </div>
-                        <!--/review profile image -->
-                     </div>
-                     <!-- /col-12 ends -->
-                  </div>
-                  <!-- /review-->
-                  <!-- review 4 -->
-                  <div class="review">
-                     <div class="col-12 p-3">
-                        <!-- caption -->
-                        <div class="review-caption">
-                           <h5>Lou Lou</h5>
-                           <div class="small-heading">
-                              Veterinarian
-                           </div>
-                           <blockquote>
-                              Patatemp dolupta orem retibusam qui commolu 
-                              Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, 
-                              vest ibulum orci eget, viverra.
-                           </blockquote>
-                        </div>
-                        <!-- Profile image -->
-                        <div class="review-profile-image">
-                           <img src="img/review4.jpg" alt="" >                       
-                        </div>
-                        <!--/review profile image -->
-                     </div>
-                     <!-- /col-12 ends -->
-                  </div>
-                  <!-- /review-->
-                  <!-- review 4 -->
-                  <div class="review">
-                     <div class="col-12 p-3">
-                        <!-- caption -->
-                        <div class="review-caption">
-                           <h5>James Doe</h5>
-                           <div class="small-heading">
-                              Pet Lover
-                           </div>
-                           <blockquote>
-                              Patatemp dolupta orem retibusam qui commolu 
-                              Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, 
-                              vest ibulum orci eget, viverra.
-                           </blockquote>
-                        </div>
-                        <!-- Profile image -->
-                        <div class="review-profile-image">
-                           <img src="img/review5.jpg" alt="" >                       
-                        </div>
-                        <!--/review profile image -->
-                     </div>
-                     <!-- /col-12 ends -->
-                  </div>
-                  <!-- /review-->
-               </div>
-               <!-- /slider -->
-            </div>
-            <!-- /col-lg -->
-         </div>
-         <!-- /.container -->
-      </section>
-      <!-- /Section ends -->
-      <!-- callout-->		   
-      <section class="callout container-fluid p-5 p-lg-0">
-         <!-- row -->
-        
-            <!-- text box  -->
-         
-            <!-- /callout-box  -->
-         </div>
-         <!-- /row -->
-      </section>
-      <!-- /callout -->          
-	  <!-- Section Stats -->	
-      <section id="stats" class="bg-lightcolor2">
-         <div class="section-heading text-center">
-            <h2>Our Stats</h2>
-         </div>
-         <div class="container">
-            <div class="col-lg-9">
-               <div class="row text-center">
-                  <div class="col-lg-6 col-xl-3">
-                     <!-- Number 1 -->
-                     <div class="numscroller" data-slno='1' data-min='0' data-max='180' data-delay='20' data-increment="19">0</div>
-                     <h5>Customers</h5>
-                  </div>
-                  <div class="col-lg-6 col-xl-3">
-                     <!-- Number 2 -->
-                     <div class="numscroller" data-slno='1' data-min='0' data-max='16' data-delay='10' data-increment="9">0</div>
-                     <h5>Professionals</h5>
-                  </div>
-                  <div class="col-lg-6 col-xl-3">
-                     <!-- Number 3 -->
-                     <div class="numscroller" data-slno='1' data-min='0' data-max='67' data-delay='20' data-increment="19">0</div>
-                     <h5>Pets Hosted</h5>
-                  </div>
-                  <div class="col-lg-6 col-xl-3">
-                     <!-- Number 4 -->
-                     <div class="numscroller" data-slno='1' data-min='0' data-max='50' data-delay='10' data-increment="9">0</div>
-                     <h5>Products</h5>
-                  </div>
-               </div>
-               <!-- /row -->            
-            </div>
-         </div>
-         <!-- /container-->
-      </section>
+     <style>
+         /* Sección de estadísticas */
+         .stats-section {
+             text-align: center;
+             background-color: #ffffff; /* Color de fondo */
+             padding: 40px 20px;
+         }
+     
+         /* Título */
+         .stats-title {
+             font-size: 2.5rem;
+             color: #0b6059;
+             margin-bottom: 20px;
+             font-weight: bold;
+         }
+     
+         /* Contenedor de estadísticas */
+         .stats-container {
+             display: flex;
+             justify-content: center;
+             gap: 50px; /* Espaciado entre contadores */
+         }
+     
+         /* Cada bloque de estadísticas */
+         .stat {
+             text-align: center;
+         }
+     
+         /* Número de estadísticas */
+         .stat-number {
+             font-size: 3rem;
+             color: #0b6059; /* Color del número */
+             font-weight: bold;
+             display: block;
+         }
+     
+         /* Etiqueta debajo del número */
+         .stat-label {
+             font-size: 1.2rem;
+             color: #333;
+             font-weight: bold;
+         }
+     </style>
+     
+     <script>
+         // Función para animar el contador
+         function animateCounter(id, endValue, duration) {
+             const element = document.getElementById(id);
+             let startValue = 0;
+             const increment = endValue / (duration / 10);
+     
+             const counter = setInterval(() => {
+                 startValue += increment;
+                 if (startValue >= endValue) {
+                     element.textContent = endValue;
+                     clearInterval(counter);
+                 } else {
+                     element.textContent = Math.floor(startValue);
+                 }
+             }, 10);
+         }
+     
+         // Llamar a los contadores
+         window.onload = () => {
+             animateCounter("stat1", 1000, 2000); // 180 clientes
+             animateCounter("stat2", 2, 2000);  // 50 productos
+         };
+     </script>
+  
+     
+     
       <!-- Section Ends-->    
       <!-- Footer -->		
       <footer>
          <!-- Contact info -->
          <div class="container">
-            <div class="row">
-               <div class="col-lg-4 text-center">
-                  <!-- Footer logo -->
-                  <img src="img/logo pnsa.png" alt="" class="center-block img-responsive">
-               </div>
-               <!-- /.col-lg-4 -->
-               <div class="col-lg-4 text-center res-margin">
-                  <ul class="list-unstyled">
-                     <li><i class="fa fa-phone"></i>(000) 000-000</li>
-                     <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">site@email.com</a></li>
-                     <li><i class="fa fa-map-marker"></i>123 Anywhere Street, London, LO4 6ON</li>
-                  </ul>
-               </div>
-               <!-- /.col-lg-4 -->
-               <div class="col-lg-4 text-center res-margin">
-                  <h5>Follow us</h5>
-                  <!--Social icons -->
-                  <div class="social-media">
-                     <a href="#" title=""><i class="fab fa-twitter"></i></a>
-                     <a href="#" title=""><i class="fab fa-facebook"></i></a>
-                     <a href="#" title=""><i class="fab fa-instagram"></i></a>
-                  </div>
-               </div>
-               <!-- /.col-lg-4 -->
-            </div>
-            <!-- /row -->
+             <div class="row">
+                 <div class="col-lg-4 text-center">
+                     <!-- Footer logo -->
+                     <img src="img/logo footer.png" alt="cachorros" class="center-block img-responsive" style="max-width: 150px;">
+     
+                 </div>
+                 <!-- /.col-lg-4 -->
+                 <div class="col-lg-4 text-center res-margin">
+                     <ul class="list-unstyled">
+                         <li><i class="fa fa-phone"></i>3217543836</li>
+                         <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">Criaderokingdog@gmail.com</a></li>
+                         <li><i class="fa fa-map-marker"></i>123 Anywhere Street, London, LO4 6ON</li>
+                     </ul>
+                 </div>
+                 <!-- /.col-lg-4 -->
+                 <div class="col-lg-4 text-center res-margin">
+                     <h5>Siguenos</h5>
+                     <div class="social-media">
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    
+                    <style>
+                     /* Contenedor de las redes sociales */
+                     .social-media {
+                         display: flex;
+                         gap: 15px; /* Espaciado entre los botones */
+                         justify-content: center; /* Centrado horizontal */
+                         align-items: center; /* Centrado vertical */
+                         margin-top: 20px; /* Ajuste opcional */
+                     }
+                     
+                     /* Estilos para cada botón */
+                     .social-media .social-icon {
+                         background-color: #0b6059 !important; /* Fondo verde exacto */
+                         color: white !important; /* Color blanco para los íconos */
+                         font-size: 24px; /* Tamaño de los íconos */
+                         width: 50px; /* Ancho del botón */
+                         height: 50px; /* Alto del botón */
+                         display: flex;
+                         justify-content: center; /* Centrado horizontal del ícono */
+                         align-items: center; /* Centrado vertical del ícono */
+                         border-radius: 50%; /* Forma circular */
+                         transition: all 0.3s ease; /* Transición suave */
+                         text-decoration: none !important; /* Quitar subrayado */
+                         border: none; /* Elimina bordes adicionales */
+                     }
+                     
+                     /* Estilo hover para los botones */
+                     .social-media .social-icon:hover {
+                         background-color: #064e46 !important; /* Fondo más oscuro al pasar el cursor */
+                         color: #ffffff !important; /* Mantiene el ícono blanco */
+                         transform: scale(1.1); /* Efecto de aumento */
+                     }
+                     </style>
+                 <!-- /.col-lg-4 -->
+             </div>
+             <!-- /row -->
          </div>
          <!-- /.container -->
-         <!-- Credits-->
-         
+         <!-- Go To Top Link -->
+         <div class="page-scroll hidden-sm hidden-xs">
+            <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
          </div>
-         <!-- /credits -->
-      </footer>
+      </div>
+      <!-- /credits -->
+     </footer>
       <!-- /footer ends -->
       <!-- Core JavaScript Files -->
       <script src="vendor/jquery/jquery.min.js"></script>

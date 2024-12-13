@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="">
+   <head>
+      <meta charset="utf-8">
+      <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- Page title -->
+      <title>Criadero king dog</title>
+      <!--[if lt IE 9]>
+      <script src="js/respond.js"></script>
+      <![endif]-->
+      <!-- Bootstrap Core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <!-- Icon fonts -->
+      <link href="fonts/fontawesome/fontawesome-all.min.css" rel="stylesheet" type="text/css">
+      <link href="fonts/flaticons/flaticon.css" rel="stylesheet" type="text/css">
+      <!-- Google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,800%7CBaloo+Thambi" rel="stylesheet">
+      <!-- Style CSS -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Plugins CSS -->
+      <link rel="stylesheet" href="css/plugins.css">
+      <!-- Color Style CSS -->
+      <link href="styles/maincolors.css" rel="stylesheet">
+      <!-- Favicons-->
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body id="page-top">
+      <!-- Preloader -->
+      <div id="preloader">
+         <div class="spinner">
+            <div class="bounce1"></div>
+         </div>
+      </div>
+      <!-- Preloader ends -->
+      <a href="" class="close-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      </a>
+      <nav class="navbar navbar-expand-xl navbar-custom fixed-top p-0">
+         <style>
+             .navbar-custom {
+                 background-color: #0b6059 !important; /* Cambia el color de fondo */
+                 border: none;
+             }
+             .navbar-custom .nav-link {
+                 color: #ffffff !important; /* Cambia el color de los enlaces */
+                 padding: 10px 15px;
+             }
+             .navbar-custom .nav-link:hover {
+                 color: #cce4ff !important; /* Cambia el color al pasar el cursor */
+             }
+             .navbar-brand img {
+                 max-height: 100%; /* Ajusta la altura del logo si es necesario */
+             }
+     
+             /* Estilos para los iconos de redes sociales */
+             .social-icons {
+                 display: flex;
+                 align-items: center;
+                 gap: 15px; /* Espaciado entre íconos */
+             }
+             .social-icons i {
+        color: #ffffff !important; /* Asegura que el color sea #4B4B4B */
+        font-size: 24px; /* Tamaño del ícono */
+        transition: color 0.3s ease, transform 0.3s ease; /* Transición para hover */
+    }
+
+    .social-icons i:hover {
+        color: #ffffff !important; /* Cambia a azul claro al pasar el cursor */
+        transform: scale(1.2); /* Efecto de aumento */
+    }
+         </style>
+         <div class="container">
+             <!-- Logo -->
+             <div class="navbar-brand navbar-brand-centered page-scroll">
+                 <a href="index.html">
+                     <img src="img/logo pnsa.png" class="img-responsive" alt="Logo">
+                 </a>
+             </div>
+     
+             <!-- Menú hamburguesa -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+     
+             <!-- Menú de navegación -->
+             <div class="collapse navbar-collapse" id="navbar">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <!-- Enlace "Inicio" -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="./index.html">Inicio</a>
+                     </li>
+                     <!-- Enlace "Acerca de nosotros" -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="./about.html">Acerca de nosotros</a>
+                     </li>
+                     <!-- Enlace "Preguntas frecuentes" -->
+                     <li class="nav-item">
+                         <a class="nav-link" href="./faq.html">Preguntas frecuentes</a>
+                     </li>
+                 </ul>
+     
+                 <!-- Iconos de redes sociales -->
+                 <div class="social-icons">
+                  <a href="https://twitter.com" title="Twitter" target="_blank">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://facebook.com" title="Facebook" target="_blank">
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://instagram.com" title="Instagram" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+         </div>
+     </nav>
+     <style>
+      /* Eliminar el color de fondo naranja por defecto (activo y visitado) */
+      .navbar-nav .nav-link {
+          background-color: #0b6059;  /* Color de fondo gris por defecto */
+          color: black; /* Color del texto */
+          padding: 10px 20px; /* Espaciado interno */
+          border-radius: 5px; /* Bordes redondeados */
+          transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+      }
+  
+      /* Efecto hover para los enlaces */
+      .navbar-nav .nav-link:hover {
+          background-color: #4B4B4B;  /* Color de fondo más oscuro al hacer hover */
+          color: white;  /* Color del texto a blanco en hover */
+      }
+  
+      /* Asegurarse de que el color de fondo no cambie cuando el enlace esté activo */
+      .navbar-nav .nav-link.active, .navbar-nav .nav-link:focus {
+          background-color: #0b6059;  /* Mantener el fondo gris cuando está activo o enfocado */
+          color: black;  /* Mantener el texto negro */
+      }
+  
+      /* Estilos para centrar la frase en el slider */
+      .header-wrapper {
+          display: flex;
+          justify-content: center;  /* Centrado horizontal */
+          align-items: center;      /* Centrado vertical */
+          height: 100%;             /* Aseguramos que el contenedor ocupe toda la altura disponible */
+      }
+  
+      .header-text {
+          text-align: center; /* Centrado del texto */
+      }
+  </style>
+  
+  <style>
+     /* Para centrar completamente el texto */
+     .header-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centra el contenido */
+        text-align: center;
+        width: 100%; /* Ocupa todo el ancho del slider */
+        height: 100%; /* Opcional si necesitas asegurarte de la altura completa */
+     }
+     
+     .header-text {
+        color: white; /* Ajusta el color del texto */
+        font-size: 13px /* Tamaño del texto ajustable */
+     }
+     .btn-primary {
+              background-color: #0b6059; /* Color gris */
+              color: white; /* Color del texto */
+              padding: 10px 20px; /* Espaciado interno */
+              text-decoration: none; /* Quitar subrayado */
+              border-radius: 5px; /* Bordes redondeados */
+              display: inline-block; /* Para mantenerlo como botón */
+              transition: background-color 0.3s ease; /* Transición suave */
+          }
+          .btn-primary:hover {
+              background-color: #0b6059; /* Color verde al pasar el cursor */
+          }
+     </style>
+      <!-- Section About -->
+      <section id="about" class="pages">
+       
+            <!-- Heading -->
+            <div class="jumbo-heading"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+               <h1>Quienes Somos?</h1>
+            </div>
+         </div>
+         <!-- container -->
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 my-auto">
+                  <h2>¿Quiénes Somos?</h2>
+                  <p>En Criadero King Dog, contamos con más de 14 años de experiencia en la cría profesional de perros de raza pura. Nuestra trayectoria refleja nuestro compromiso con la calidad, la confianza y el cuidado excepcional de cada cachorro que entregamos a nuevas familias en Colombia.
+
+                  </p>
+                  <p>
+                  </p>
+               </div>
+               <!-- /col-->
+               <!-- image -->
+               <div class="col-xl-5 offset-xl-1 text-center res-margin">
+                  <img src="img/adoption/WhatsApp Image 2024-11-29 at 5.45.57 PM.jpeg" class="img-rounded img-fluid" alt="">
+               </div>
+               <!-- /col-->
+            </div>
+            <!-- /row -->
+            <div class="margin1 text-center">
+               <div class="card lightcolor">
+                  <div class="row">
+                     <!-- item 1 -->
+                     <div class="features col-lg-3">
+                        <div class="col-12 big-icon">
+                           <!-- icon -->
+                           <i class="flaticon-dog-and-pets-house"></i>
+                        </div>
+                        <div class="col-12">
+                           <h5>Compromiso con la Calidad</h5>
+                           <p>Cachorros de raza pura con certificados de salud y pureza.</p>
+                        </div>
+                     </div>
+                     <!-- /col-lg-3 -->
+                     <!-- item 2 -->
+                     <div class="features col-lg-3">
+                        <div class="col-12 big-icon">
+                           <!-- icon -->
+                           <i class="flaticon-dog-in-front-of-a-man"></i>
+                        </div>
+                        <div class="col-12">
+                           <h5>Transparencia y Confianza</h5>
+                           <p>Garantías claras y procesos transparentes que respaldan cada venta.</p>
+                        </div>
+                     </div>
+                     <!-- /col-lg-3 -->
+                     <!-- item 3 -->
+                     <div class="features col-lg-3">
+                        <div class="col-12 big-icon">
+                           <!-- icon -->
+                           <i class="flaticon-veterinarian-hospital"></i>
+                        </div>
+                        <div class="col-12">
+                           <h5>Bienestar Animal</h5>
+                           <p>Criamos cachorros en un entorno seguro y lleno de cariño, promoviendo su salud y felicidad.</p>
+                        </div>
+                     </div>
+                     <!-- /col-lg-3 -->
+                     <!-- item 4 -->
+                     <div class="features col-lg-3">
+                        <div class="col-12 big-icon">
+                           <!-- icon -->
+                           <i class="flaticon-animals-3"></i>
+                        </div>
+                        <div class="col-12">
+                           <h5>Asesoría Personalizada</h5>
+                           <p>Acompañamiento total, brindando la mejor asesoría pre y postventa.</p>
+                        </div>
+                     </div>
+                     <!-- /col-lg-3 -->
+                  </div>
+                  <!-- /card -->
+               </div>
+               <!-- /row -->
+            </div>
+            <!-- /margin1 -->
+            <div class="row margin1">
+               <div class="col-lg-6 my-auto res-margin">
+                  <h3>Acerca de nosotros</h3>
+                  <p>En Criadero King Dog, llevamos más de 14 años de experiencia siendo referentes en la cría profesional de perros de raza pura en Colombia. Nos enorgullece ofrecer cachorros que cumplen con los más altos estándares de calidad, pureza genética y salud. A través de nuestro compromiso con la transparencia y un servicio excepcional, hemos construido relaciones de confianza con familias que buscan un compañero fiel y saludable.
+                  </p>
+               </div>
+               <div class="col-lg-5 offset-lg-1">
+                <!-- Accordion -->
+                <div class="accordion mt-4" id="accordion1">
+                   <!-- accordion item -->
+                   <div class="accordion-item">
+                      <p class="accordion-header" id="headingOne">
+                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                         Nuestra Historia
+                         </button>
+                      </p>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion1">
+                         <div class="accordion-body">
+                            <p>Hace más de una década, iniciamos este camino con el propósito de ofrecer cachorros de raza pura, saludables y con garantías únicas. Desde entonces, hemos evolucionado hasta convertirnos en una referencia en la venta de cachorros en Colombia, gracias a nuestra dedicación y amor por los animales.</p>
+                         </div>
+                      </div>
+                   </div>
+             
+                   <div class="accordion-item">
+                      <p class="accordion-header" id="headingTwo">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                         Nuestra Misión
+                         </button>
+                      </p>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion1">
+                         <div class="accordion-body">
+                            <p>Proveer cachorros de alta calidad genética y salud comprobada, ofreciendo un servicio integral que priorice tanto el bienestar de las mascotas como la satisfacción de sus familias.</p>
+                         </div>
+                      </div>
+                   </div>
+             
+                   <div class="accordion-item">
+                      <p class="accordion-header" id="headingThree">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                         Nuestra Visión
+                         </button>
+                      </p>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion1">
+                         <div class="accordion-body">
+                            <p>Seguir consolidándonos como el criadero de perros líder en Colombia, reconocido por nuestra experiencia de más de 14 años, la excelencia en nuestros procesos de crianza de perros de raza y el acompañamiento que brindamos a cada cliente.</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             
+             <style>
+               /* Estilo para los botones de los acordeones */
+               .accordion-button {
+                 background-color: #0b6059 !important; /* Color de fondo del botón por defecto */
+                 color: white !important; /* Color del texto */
+                 border: none !important; /* Quitar borde */
+                 padding: 15px !important; /* Espaciado dentro del botón */
+                 border-radius: 5px !important; /* Bordes redondeados */
+                 transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+               }
+             
+               /* Cambiar el color cuando el acordeón está abierto */
+               .accordion-button:not(.collapsed) {
+                 background-color: #0b6059 !important; /* Mantener el mismo color cuando está expandido */
+                 color: white !important; /* Texto blanco cuando está expandido */
+               }
+             
+               /* Cambiar el color cuando está en hover */
+               .accordion-button:hover {
+                 background-color: #0b6059 !important; /* Mantener el mismo color al hacer hover */
+                 color: white !important; /* Texto blanco al hacer hover */
+               }
+             
+               /* Estilo para el panel colapsable */
+               .accordion-collapse {
+                 background-color: #e6f7f5 !important; /* Fondo suave para el panel */
+               }
+             
+               /* Estilo para los bordes de los items del acordeón */
+               .accordion-item {
+                 border: 1px solid #0b6059 !important; /* Borde verde en los items */
+                 margin-bottom: 5px !important; /* Separación entre items */
+                 border-radius: 5px !important; /* Bordes redondeados */
+               }
+             
+               /* Quitar borde de enfoque predeterminado */
+               .accordion-button:focus {
+                 box-shadow: none !important; /* Eliminar borde de enfoque */
+               }
+             </style>
+                     <!-- /accordion item -->
+                  </div>
+                  <!-- /.accordion -->
+               </div>
+               <!-- /col-lg-5 -->
+            </div>
+            <!-- /row -->
+         </div>
+         <!-- /container-->
+      </section>
+      <!-- /Section ends -->
+      <!-- Footer -->		
+      <footer>
+         <!-- Contact info -->
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 text-center">
+                  <!-- Footer logo -->
+                  <img src="img/logo footer.png" alt="" class="center-block img-responsive">
+               </div>
+               <!-- /.col-lg-4 -->
+               <div class="col-lg-4 text-center res-margin">
+                  <ul class="list-unstyled">
+                      <li><i class="fa fa-phone"></i>3217543836</li>
+                      <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">Criaderokingdog@gmail.com</a></li>
+                      <li><i class="fa fa-map-marker"></i>123 Anywhere Street, London, LO4 6ON</li>
+                  </ul>
+              </div>
+               <!-- /.col-lg-4 -->
+               <div class="col-lg-4 text-center res-margin">
+                  <h5>Siguenos</h5>
+                  <!--Social icons -->
+                  <div class="social-media">
+                     <a href="#" title=""><i class="fab fa-twitter"></i></a>
+                     <a href="#" title=""><i class="fab fa-facebook"></i></a>
+                     <a href="#" title=""><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+               <!-- /.col-lg-4 -->
+            </div>
+            <!-- /row -->
+         </div>
+         <!-- /.container -->
+         <!-- Credits-->
+         <div class="credits col-lg-12 text-center">
+            <!-- Go To Top Link -->
+            <div class="hidden-sm d-none d-lg-block">
+               <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+            </div>
+         </div>
+         <!-- /credits -->
+      </footer>
+      <!-- /footer ends -->
+      <!-- Core JavaScript Files -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!-- Main Js -->
+      <script src="js/main.js"></script>
+      <!-- Contact form -->
+      <script src="js/contact.js"></script>
+      <!--Other Plugins -->
+      <script src="js/plugins.js"></script>
+      <!-- Prefix free CSS -->
+      <script src="js/prefixfree.js"></script>
+   </body>
+</html>

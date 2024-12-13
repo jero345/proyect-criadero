@@ -49,7 +49,7 @@ h2,
 .social-media a i:hover,
 .team-wrap .member .wrap .info .position li:before,
 ul.custom li {
-    color: #0C4348;
+    color: #0b6059;
 }
 
 .service,
@@ -69,12 +69,12 @@ ul.custom li {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    border-color: #0C4348;
+    border-color: #0b6059;
 }
 
 .box_icon > .icon:hover > .image,
 .review .review-profile-image img {
-    outline-color: #0C4348;
+    outline-color: #0b6059;
 }
 
 /*________  Light Green  ________  */
