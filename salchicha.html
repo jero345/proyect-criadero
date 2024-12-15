@@ -32,6 +32,75 @@
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
    </head>
    <body id="page-top">
+    <style>
+        /* Botón de WhatsApp */
+        .btn-whatsapp {
+            position: fixed;
+            z-index: 999;
+            bottom: 17vh; /* Ajustado para que esté encima del botón de subir */
+            right: 20px;
+        }
+
+        .btn-whatsapp:before,
+        .btn-whatsapp:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #00e676;
+            opacity: 0;
+            animation: onda 1.7s infinite;
+        }
+
+        .btn-whatsapp:before {
+            animation-delay: 1s;
+        }
+
+        .btn-whatsapp:after {
+            animation-delay: 1.3s;
+        }
+
+        .btn-whatsapp img {
+       
+            z-index: 2;
+        }
+
+        @keyframes onda {
+            0% {
+                transform: scale(1);
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(2.5);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Botón de WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=573052583835&text=Hola%20Bocaditos%20T%26T%2C%20quiero%20hacer%20mi%20pedido!" class="btn-whatsapp">
+        <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+    </a>
+
+    <!-- Botón de subir -->
+    <div class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <img src="./img/icon-up.svg" alt="Subir">
+    </div>
+</body>
+<body>
+    <a href="https://api.whatsapp.com/send?phone=573052583835&text=Hola%20Bocaditos%20T%26T%2C%20quiero%20hacer%20mi%20pedido!" class="btn-whatsapp">
+        <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+    </a>
+</body>
       <!-- Preloader -->
       <div id="preloader">
          <div class="spinner">
@@ -169,20 +238,20 @@
                          </button>
                          <div class="accordion-content">
                              <p>
-                                 1 Tamaño y peso:
+                                <u>1 Tamaño y peso:</u> 
                                  El Salchicha (Teckel) es un perro pequeño que suele pesar entre 3 y 7 kg, lo que lo convierte en una excelente opción para hogares con espacio limitado o personas que buscan un compañero fácil de manejar.
 A pesar de su pequeño tamaño, el Teckel es activo y enérgico, por lo que necesita ejercicio regular para mantenerse saludable y feliz.
 
 
                                  
                                  <br><br>
-                                 2 Personalidad destacada:
+                               <u>2 Personalidad destacada:</u>  
                                  El Salchicha es conocido por su personalidad valiente y su independencia. Aunque es pequeño, no se deja intimidar por los perros más grandes y es conocido por su actitud juguetona y extrovertida.
                                  Es un perro leal y afectuoso con su familia, aunque puede ser algo terco, por lo que requiere entrenamiento constante y paciencia.
                                  
                                  
                                  <br><br>
-                                 3 Pelaje y mantenimiento:
+                                <u>3 Pelaje y mantenimiento:</u> 
                                  Los Teckel pueden tener tres tipos de pelaje: liso, largo o duro. El pelaje liso es fácil de mantener y no requiere muchos cuidados, mientras que el largo y duro puede necesitar un cepillado regular para evitar que se enrede.
                                  Su pelaje no suele desprender mucho pelo, lo que lo hace adecuado para personas con alergias o quienes prefieren un perro de bajo mantenimiento en cuanto a cuidado de pelaje.
                                  
@@ -205,19 +274,19 @@ A pesar de su pequeño tamaño, el Teckel es activo y enérgico, por lo que nece
                          </button>
                          <div class="accordion-content">
                            <p>
-                              1 Alimentación:
+                             <u>1 Alimentación:</u> 
                               El Salchicha tiene un metabolismo rápido, por lo que es importante alimentarlo con una dieta de alta calidad que se adapte a su tamaño y nivel de actividad. En King Dog, te proporcionamos asesoría sobre la mejor alimentación para tu Teckel, ayudando a que tu cachorro crezca fuerte y saludable.
                               Recomendamos alimentos que mantengan un equilibrio adecuado de nutrientes para asegurar un desarrollo óptimo.
                               
                               
                               <br><br>
-                              2 Ejercicio:
+                             <u>2 Ejercicio:</u> 
                               Aunque el Teckel es pequeño, tiene mucha energía y disfruta de paseos diarios y tiempo de juego. Es un perro inteligente y curioso, por lo que también disfruta de actividades que lo estimulen mentalmente.
                               Se adapta bien a diferentes tipos de viviendas, pero es esencial ofrecer ejercicio regular para mantenerlo feliz y equilibrado.
                               
                               
                               <br><br>
-                              3 Salud y cuidados:
+                            <u> 3 Salud y cuidados:</u> 
                               Al igual que todos los cachorros de King Dog, el Teckel viene con un certificado de salud que garantiza que ha sido debidamente vacunado y desparasitado. Además, ofrecemos garantía de salud para que puedas estar tranquilo sobre el bienestar de tu nuevo compañero.
                               Es importante controlar su peso y evitar problemas de espalda, ya que su cuerpo alargado puede ser susceptible a trastornos en la columna vertebral si no se mantiene en un peso adecuado.
                               
