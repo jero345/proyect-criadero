@@ -32,6 +32,78 @@
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
    </head>
    <body id="page-top">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Botón de WhatsApp</title>
+      <style>
+          /* Botón de WhatsApp */
+          .btn-whatsapp {
+              position: fixed;
+              z-index: 999;
+              bottom: 17vh; /* Ajustado para que esté encima del botón de subir */
+              right: 20px;
+          }
+  
+          .btn-whatsapp:before,
+          .btn-whatsapp:after {
+              content: "";
+              position: absolute;
+              top: 2px;
+              left: 4px;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-color: #00e676;
+              opacity: 0;
+              animation: onda 1.7s infinite;
+          }
+  
+          .btn-whatsapp:before {
+              animation-delay: 1s;
+          }
+  
+          .btn-whatsapp:after {
+              animation-delay: 1.3s;
+          }
+  
+          .btn-whatsapp img {
+         
+              z-index: 2;
+          }
+  
+          @keyframes onda {
+              0% {
+                  transform: scale(1);
+              }
+  
+              15% {
+                  opacity: 1;
+              }
+  
+              100% {
+                  opacity: 0;
+                  transform: scale(2.5);
+              }
+          }
+  
+      </style>
+  </head>
+  <body>
+      <!-- Botón de WhatsApp -->
+      <a href="https://api.whatsapp.com/send/?phone=573217543836&text&type=phone_number&app_absent=0" class="btn-whatsapp">
+          <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+      </a>
+  
+      <!-- Botón de subir -->
+      <div class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+          <img src="./img/icon-up.svg" alt="Subir">
+      </div>
+  </body>
+  <body>
+      <a href="https://api.whatsapp.com/send/?phone=573217543836&text&type=phone_number&app_absent=0" class="btn-whatsapp">
+          <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+      </a>
+  </body>
       <!-- Preloader -->
       <div id="preloader">
          <div class="spinner">
@@ -83,8 +155,17 @@
                  </a>
              </div>
      
-             <!-- Menú hamburguesa -->
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <!-- Menú hamburguesa -->
+<button 
+class="navbar-toggler" 
+style="background-color: white; border: none;" 
+type="button" 
+data-bs-toggle="collapse" 
+data-bs-target="#navbar" 
+aria-controls="navbar" 
+aria-expanded="false" 
+aria-label="Toggle navigation">
+</button>
      
              <!-- Menú de navegación -->
              <div class="collapse navbar-collapse" id="navbar">
@@ -105,13 +186,12 @@
      
                  <!-- Iconos de redes sociales -->
                  <div class="social-icons">
-                  <a href="https://twitter.com" title="Twitter" target="_blank">
-                      <i class="fab fa-twitter"></i>
+                      
                   </a>
-                  <a href="https://facebook.com" title="Facebook" target="_blank">
+                  <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title="Facebook" target="_blank">
                       <i class="fab fa-facebook"></i>
                   </a>
-                  <a href="https://instagram.com" title="Instagram" target="_blank">
+                  <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram" target="_blank">
                       <i class="fab fa-instagram"></i>
                   </a>
               </div>
@@ -381,7 +461,7 @@
                   <ul class="list-unstyled">
                       <li><i class="fa fa-phone"></i>3217543836</li>
                       <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">Criaderokingdog@gmail.com</a></li>
-                      <li><i class="fa fa-map-marker"></i>123 Anywhere Street, London, LO4 6ON</li>
+                      <li><i class="fa fa-map-marker"></i>Oriente medellin</li>
                   </ul>
               </div>
                <!-- /.col-lg-4 -->
@@ -389,9 +469,8 @@
                   <h5>Siguenos</h5>
                   <!--Social icons -->
                   <div class="social-media">
-                     <a href="#" title=""><i class="fab fa-twitter"></i></a>
-                     <a href="#" title=""><i class="fab fa-facebook"></i></a>
-                     <a href="#" title=""><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title=""><i class="fab fa-facebook"></i></a>
+                     <a href="https://www.instagram.com/kingdog_colombia/" title=""><i class="fab fa-instagram"></i></a>
                   </div>
                </div>
                <!-- /.col-lg-4 -->
