@@ -128,71 +128,6 @@
           color: #ffffff !important; /* Cambia a azul claro al pasar el cursor */
           transform: scale(1.2); /* Efecto de aumento */
       }
-       /* FAQ Section */
-    .faq-section {
-        margin-top: 40px;
-    }
-
-    .faq-section h1 {
-        font-size: 2.5rem;
-        color: #0b6059;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    /* Accordion Container */
-    .accordion-item {
-        margin-bottom: 15px;
-        border: none;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .accordion-item:hover {
-        transform: scale(1.02);
-    }
-
-    /* Accordion Button */
-    .accordion-button {
-        background-color: #f8f9fa;
-        color: #333;
-        font-weight: bold;
-        font-size: 1.1rem;
-        text-align: left;
-        width: 100%;
-        padding: 15px 20px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .accordion-button:hover {
-        background-color: #e6f7f5;
-    }
-
-    .accordion-item.active .accordion-button {
-        background-color: #0b6059;
-        color: #ffffff;
-    }
-
-    /* Accordion Content */
-    .accordion-content {
-        padding: 0 20px;
-        background-color: #ffffff;
-        color: #555;
-        font-size: 1rem;
-        line-height: 1.5;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out, padding 0.3s ease;
-    }
-
-    .accordion-item.active .accordion-content {
-        padding: 15px 20px;
-    }
            </style>
            <div class="container">
                <!-- Logo -->
@@ -244,45 +179,57 @@ aria-label="Toggle navigation">
                 </div>
            </div>
        </nav>
-     
-    
-<!-- FAQ Section -->
-<div class="container mt-5 pt-5">
-    <div class="faq-section">
-        <p class="text-uppercase text-muted">FAQ Questions</p>
-        <h1>General Questions</h1>
-        <div class="accordion-item">
-            <button onclick="toggleAccordion(this)">¿Qué razas de cachorros están disponibles en King Dog?</button>
-            <div class="accordion-content">
-                En King Dog, contamos con una amplia selección de razas, desde pequeñas como Pomerania, Yorkshire Terrier y Shih Tzu, hasta medianas y grandes como Golden Retriever, Bulldog Francés, Labrador y Husky Siberiano, etc.
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button onclick="toggleAccordion(this)">¿Los cachorros tienen certificado de pureza de raza?</button>
-            <div class="accordion-content">
-                Sí, todos los cachorros que ofrecemos cuentan con una garantía de pureza de raza de por vida, respaldada por nuestro criadero. Esto asegura que provienen de linajes auténticos, posicionándonos como líderes en la venta de perros en Colombia.
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button onclick="toggleAccordion(this)">¿Qué incluye el certificado de salud?</button>
-            <div class="accordion-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button onclick="toggleAccordion(this)">How Long Have You Been A Certified B Corporation?</button>
-            <div class="accordion-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button onclick="toggleAccordion(this)">How Does A Company Become Certified?</button>
-            <div class="accordion-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-    </div>
+
+<style>
+    .menu-desplegable {
+    position: relative;
+    margin-top: 20px;
+}
+
+.btn-menu {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.menu-desplegable:hover .menu {
+    display: block;
+}
+</style>
+
+    <!-- Menú desplegable -->
+<div class="menu-desplegable">
+    <button class="btn-menu">Menú</button>
+    <ul class="menu">
+        <li><a href="#">Opción 1</a></li>
+        <li><a href="#">Opción 2</a></li>
+        <li><a href="#">Opción 3</a></li>
+    </ul>
 </div>
+
 
 
 <!-- Footer -->
@@ -317,29 +264,5 @@ aria-label="Toggle navigation">
 
 <!-- Scripts -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script>
-    function toggleAccordion(button) {
-        const item = button.parentNode;
-        const content = item.querySelector('.accordion-content');
-        item.classList.toggle('active');
-        if (item.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-            content.style.maxHeight = "0px";
-        }
-    }
-    document.querySelectorAll('.accordion-content').forEach(content => {
-        content.style.maxHeight = "0px";
-        content.style.overflow = "hidden";
-        content.style.transition = "max-height 0.3s ease-out";
-    });
-</script>
-<style>
-    .faq-section { margin-top: 40px; }
-    .accordion-item { margin-bottom: 10px; }
-    .accordion-button { background-color: #f9f9f9; padding: 15px; }
-    .accordion-content { padding: 15px; background-color: #fff; max-height: 0; overflow: hidden; }
-    .accordion-item.active .accordion-button { background-color: #0b6059; color: #fff; }
-</style>
 </body>
 </html>
