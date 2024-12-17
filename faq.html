@@ -9,259 +9,387 @@
     <!-- Icon fonts -->
     <link href="fonts/fontawesome/fontawesome-all.min.css" rel="stylesheet" type="text/css">
     <!-- Style CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-4o5D6CEWZaDQJkU5fCjgxFhEN5cs0QcSy3DUzXFs5BNIlDNGSTzwhmnqgBO1evEZKYOe2EF44taVpPci0Pto/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/style.css" rel="stylesheet">
+     <!-- Favicons-->
+     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+     <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+     <link rel="shortcut icon" href="./img/logo pnsa.png" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-4o5D6CEWZaDQJkU5fCjgxFhEN5cs0QcSy3DUzXFs5BNIlDNGSTzwhmnqgBO1evEZKYOe2EF44taVpPci0Pto/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body id="page-top">
-
-    <body id="page-top">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Botón de WhatsApp</title>
-        <style>
-            /* Botón de WhatsApp */
-            .btn-whatsapp {
-                position: fixed;
-                z-index: 999;
-                bottom: 17vh; /* Ajustado para que esté encima del botón de subir */
-                right: 20px;
-            }
-    
-            .btn-whatsapp:before,
-            .btn-whatsapp:after {
-                content: "";
-                position: absolute;
-                top: 2px;
-                left: 4px;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background-color: #00e676;
-                opacity: 0;
-                animation: onda 1.7s infinite;
-            }
-    
-            .btn-whatsapp:before {
-                animation-delay: 1s;
-            }
-    
-            .btn-whatsapp:after {
-                animation-delay: 1.3s;
-            }
-    
-            .btn-whatsapp img {
-           
-                z-index: 2;
-            }
-    
-            @keyframes onda {
-                0% {
-                    transform: scale(1);
-                }
-    
-                15% {
-                    opacity: 1;
-                }
-    
-                100% {
-                    opacity: 0;
-                    transform: scale(2.5);
-                }
-            }
-    
-        </style>
-    </head>
-    <body>
-        <!-- Botón de WhatsApp -->
-        <a href="https://api.whatsapp.com/send/?phone=573217543836&text&type=phone_number&app_absent=0" class="btn-whatsapp">
-            <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
-        </a>
-    
-        <!-- Botón de subir -->
-        <div class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-            <img src="./img/icon-up.svg" alt="Subir">
-        </div>
-    </body>
-    <body>
-        <a href="https://api.whatsapp.com/send/?phone=573217543836&text&type=phone_number&app_absent=0" class="btn-whatsapp">
-            <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
-        </a>
-    </body>
-        <!-- Preloader -->
-        <div id="preloader">
-           <div class="spinner">
-              <div class="bounce1"></div>
-           </div>
-        </div>
-        <!-- Preloader ends -->
-        <a href="" class="close-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        </a>
-        <nav class="navbar navbar-expand-xl navbar-custom fixed-top p-0">
-           <style>
-               .navbar-custom {
-                   background-color: #0b6059 !important; /* Cambia el color de fondo */
-                   border: none;
-               }
-               .navbar-custom .nav-link {
-                   color: #ffffff !important; /* Cambia el color de los enlaces */
-                   padding: 10px 15px;
-               }
-               .navbar-custom .nav-link:hover {
-                   color: #cce4ff !important; /* Cambia el color al pasar el cursor */
-               }
-               .navbar-brand img {
-                   max-height: 100%; /* Ajusta la altura del logo si es necesario */
-               }
-       
-               /* Estilos para los iconos de redes sociales */
-               .social-icons {
-                   display: flex;
-                   align-items: center;
-                   gap: 15px; /* Espaciado entre íconos */
-               }
-               .social-icons i {
-          color: #ffffff !important; /* Asegura que el color sea #4B4B4B */
-          font-size: 24px; /* Tamaño del ícono */
-          transition: color 0.3s ease, transform 0.3s ease; /* Transición para hover */
-      }
-  
-      .social-icons i:hover {
-          color: #ffffff !important; /* Cambia a azul claro al pasar el cursor */
-          transform: scale(1.2); /* Efecto de aumento */
-      }
-           </style>
-           <div class="container">
-               <!-- Logo -->
-               <div class="navbar-brand navbar-brand-centered page-scroll">
-                   <a href="index.html">
-                       <img src="img/logo pnsa.png" class="img-responsive" alt="Logo">
-                   </a>
-               </div>
-       
-             <!-- Menú hamburguesa -->
-<button 
-class="navbar-toggler" 
-style="background-color: white; border: none;" 
-type="button" 
-data-bs-toggle="collapse" 
-data-bs-target="#navbar" 
-aria-controls="navbar" 
-aria-expanded="false" 
-aria-label="Toggle navigation">
-</button>
-       
-               <!-- Menú de navegación -->
-               <div class="collapse navbar-collapse" id="navbar">
-                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                       <!-- Enlace "Inicio" -->
-                       <li class="nav-item">
-                           <a class="nav-link" href="./index.html">Inicio</a>
-                       </li>
-                       <!-- Enlace "Acerca de nosotros" -->
-                       <li class="nav-item">
-                           <a class="nav-link" href="./about.html">Acerca de nosotros</a>
-                       </li>
-                       <!-- Enlace "Preguntas frecuentes" -->
-                       <li class="nav-item">
-                           <a class="nav-link" href="./faq.html">Preguntas frecuentes</a>
-                       </li>
-                   </ul>
-       
-                   <!-- Iconos de redes sociales -->
-                   <div class="social-icons">
-                        
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title="Facebook" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-           </div>
-       </nav>
-
-<style>
-    .menu-desplegable {
-    position: relative;
-    margin-top: 20px;
-}
-
-.btn-menu {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 200px;
-}
-
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #337ab7;
-}
-
-.menu-desplegable:hover .menu {
-    display: block;
-}
-</style>
-
-    <!-- Menú desplegable -->
-<div class="menu-desplegable">
-    <button class="btn-menu">Menú</button>
-    <ul class="menu">
-        <li><a href="#">Opción 1</a></li>
-        <li><a href="#">Opción 2</a></li>
-        <li><a href="#">Opción 3</a></li>
-    </ul>
-</div>
-
-
-
-<!-- Footer -->
-<footer class="mt-5">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="spinner">
+       <div class="bounce1"></div>
+    </div>
+ </div>
+ <!-- Preloader ends -->
+ <a href="" class="close-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+ </a>
+ <nav class="navbar navbar-expand-xl navbar-custom fixed-top p-0">
+    <style>
+        .navbar-custom {
+            background-color: #0b6059 !important; /* Cambia el color de fondo */
+            border: none;
+        }
+        .navbar-custom .nav-link {
+            color: #ffffff !important; /* Cambia el color de los enlaces */
+            padding: 10px 15px;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #cce4ff !important; /* Cambia el color al pasar el cursor */
+        }
+        .navbar-brand img {
+            max-height: 100%; /* Ajusta la altura del logo si es necesario */
+        }
+ 
+        /* Estilos para los iconos de redes sociales */
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Espaciado entre íconos */
+        }
+        .social-icons i {
+   color: #ffffff !important; /* Asegura que el color sea #4B4B4B */
+   font-size: 24px; /* Tamaño del ícono */
+   transition: color 0.3s ease, transform 0.3s ease; /* Transición para hover */
+ }
+ 
+ .social-icons i:hover {
+   color: #ffffff !important; /* Cambia a azul claro al pasar el cursor */
+   transform: scale(1.2); /* Efecto de aumento */
+ }
+    </style>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 text-center">
-                <img src="img/logo footer.png" alt="" class="center-block img-responsive">
+        <!-- Logo -->
+        <div class="navbar-brand navbar-brand-centered page-scroll">
+            <a href="index.html">
+                <img src="img/logo pnsa.png" class="img-responsive" alt="Logo">
+            </a>
+        </div>
+ 
+       <!-- Menú hamburguesa -->
+ <button 
+ class="navbar-toggler" 
+ style="background-color: white; border: none;" 
+ type="button" 
+ data-bs-toggle="collapse" 
+ data-bs-target="#navbar" 
+ aria-controls="navbar" 
+ aria-expanded="false" 
+ aria-label="Toggle navigation">
+ </button>
+ 
+        <!-- Menú de navegación -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Enlace "Inicio" -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <!-- Enlace "Acerca de nosotros" -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">Acerca de nosotros</a>
+                </li>
+                <!-- Enlace "Preguntas frecuentes" -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./faq.html">Preguntas frecuentes</a>
+                </li>
+            </ul>
+ 
+            <!-- Iconos de redes sociales -->
+            <div class="social-icons">
+             <a href="https://www.tiktok.com/@criadero_kingdog?_t=8sHSJ01SHeY&_r=1" title="TikTok" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+             </a>
+             <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title="Facebook" target="_blank">
+                 <i class="fab fa-facebook"></i>
+             </a>
+             <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram" target="_blank">
+                 <i class="fab fa-instagram"></i>
+             </a>
+         </div>
+    </div>
+ </nav>
+ <style>
+ /* Eliminar el color de fondo naranja por defecto (activo y visitado) */
+ .navbar-nav .nav-link {
+     background-color: #0b6059;  /* Color de fondo gris por defecto */
+     color: black; /* Color del texto */
+     padding: 10px 20px; /* Espaciado interno */
+     border-radius: 5px; /* Bordes redondeados */
+     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+ }
+ 
+ /* Efecto hover para los enlaces */
+ .navbar-nav .nav-link:hover {
+     background-color: #4B4B4B;  /* Color de fondo más oscuro al hacer hover */
+     color: white;  /* Color del texto a blanco en hover */
+ }
+ 
+ /* Asegurarse de que el color de fondo no cambie cuando el enlace esté activo */
+ .navbar-nav .nav-link.active, .navbar-nav .nav-link:focus {
+     background-color: #0b6059;  /* Mantener el fondo gris cuando está activo o enfocado */
+     color: black;  /* Mantener el texto negro */
+ }
+ 
+ /* Estilos para centrar la frase en el slider */
+ .header-wrapper {
+     display: flex;
+     justify-content: center;  /* Centrado horizontal */
+     align-items: center;      /* Centrado vertical */
+     height: 100%;             /* Aseguramos que el contenedor ocupe toda la altura disponible */
+ }
+ 
+ .header-text {
+     text-align: center; /* Centrado del texto */
+ }
+ </style>
+ 
+ <style>
+ /* Para centrar completamente el texto */
+ .header-wrapper {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); /* Centra el contenido */
+   text-align: center;
+   width: 100%; /* Ocupa todo el ancho del slider */
+   height: 100%; /* Opcional si necesitas asegurarte de la altura completa */
+ }
+ 
+ .header-text {
+   color: white; /* Ajusta el color del texto */
+   font-size: 13px /* Tamaño del texto ajustable */
+ }
+ .btn-primary {
+         background-color: #0b6059; /* Color gris */
+         color: white; /* Color del texto */
+         padding: 10px 20px; /* Espaciado interno */
+         text-decoration: none; /* Quitar subrayado */
+         border-radius: 5px; /* Bordes redondeados */
+         display: inline-block; /* Para mantenerlo como botón */
+         transition: background-color 0.3s ease; /* Transición suave */
+     }
+     .btn-primary:hover {
+         background-color: #0b6059; /* Color verde al pasar el cursor */
+     }
+ </style>
+       </nav>
+       <style>
+        /* Estilo General */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+    
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0b6059;
+        }
+    
+        /* Espaciado adicional */
+        .accordion-container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 800px;
+            margin-top: 100px; /* Espacio general arriba */
+            margin-bottom: 50px;
+        }
+    
+        .accordion-item {
+            background-color: #0b6059;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px; /* Espacio entre acordeones */
+            overflow: hidden;
+        }
+    
+        /* Primera pregunta separada */
+        .accordion-item:first-child {
+            margin-top: 20px; /* Ajuste específico para la primera pregunta */
+        }
+    
+        .accordion-header {
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+    
+        .accordion-header:hover {
+            background-color: #084c46;
+        }
+    
+        .accordion-header::after {
+            content: '\25BC'; /* Flecha hacia abajo */
+            transition: transform 0.3s ease;
+        }
+    
+        .accordion-item.active .accordion-header::after {
+            transform: rotate(180deg); /* Flecha hacia arriba */
+        }
+    
+        .accordion-content {
+            background-color: #fff;
+            color: #333;
+            padding: 0 15px;
+            max-height: 0; /* Inicialmente oculto */
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+        }
+    
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preguntas Frecuentes</h1>
+    <div class="accordion-container">
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                ¿Qué razas de cachorros están disponibles en King Dog?
             </div>
-            <div class="col-lg-4 text-center res-margin">
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-phone"></i> 3217543836</li>
-                    <li><i class="fa fa-envelope"></i> Email: <a href="mailto:Criaderokingdog@gmail.com">Criaderokingdog@gmail.com</a></li>
-                    <li><i class="fa fa-map-marker"></i> Oriente Medellín</li>
-                </ul>
-            </div>
-            <div class="col-lg-4 text-center res-margin">
-                <h5>Síguenos</h5>
-                <div class="social-media">
-                    <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr" title=""><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/kingdog_colombia/" title=""><i class="fab fa-instagram"></i></a>
-                </div>
+            <div class="accordion-content">
+                En King Dog, contamos con una amplia selección de razas, desde pequeñas como Pomerania, Yorkshire Terrier y Shih Tzu, hasta medianas y grandes como Golden Retriever, Bulldog Francés, Labrador y Husky Siberiano.
             </div>
         </div>
-        <div class="credits col-lg-12 text-center">
-            <div class="hidden-sm d-none d-lg-block">
-                <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Pregunta 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                ¿Los cachorros tienen certificado de pureza de raza?
+            </div>
+            <div class="accordion-content">
+                Sí, todos los cachorros que ofrecemos cuentan con una garantía de pureza de raza de por vida, respaldada por nuestro criadero. Esto asegura que provienen de linajes auténticos, posicionándonos como líderes en la venta de perros en Colombia.
+            </div>
+        </div>
+             <!-- Pregunta 2 -->
+             <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    ¿Qué pasa si mi cachorro se enferma después de la compra?
+                </div>
+                <div class="accordion-content">
+                   
+Ofrecemos una garantía de salud inicial que cubre cualquier enfermedad preexistente al momento de la entrega.
+
+                </div>
+            </div>
+
+        <!-- Pregunta 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                ¿Qué incluye el certificado de salud?
+            </div>
+            <div class="accordion-content">
+               
+Incluye un historial de vacunación y desparasitación, confirmando que el cachorro está en perfectas condiciones al momento de la entrega.
             </div>
         </div>
     </div>
-</footer>
 
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentNode; // Obtener el elemento padre (accordion-item)
+
+            // Cerrar otros acordeones
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Alternar el estado activo del acordeón actual
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+
+
+<footer>
+    <!-- Contact info -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <!-- Footer logo -->
+                <img src="img/logo footer.png" alt="cachorros" class="center-block img-responsive" style="max-width: 150px;">
+
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4 text-center res-margin">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone"></i>3217543836</li>
+                    <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">Criaderokingdog@gmail.com</a></li>
+                    <li><i class="fa fa-map-marker"></i>Oriente Medellin</li>
+                </ul>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4 text-center res-margin">
+                <h5>Siguenos</h5>
+                <div class="social-media">
+                   <a href="https://www.tiktok.com/@criadero_kingdog?_t=8sHSJ01SHeY&_r=1" title="TikTok" target="_blank">
+                       <i class="fab fa-tiktok"></i>
+                   </a>
+                   <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title="Facebook"><i class="fab fa-facebook"></i></a>
+                   <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram"><i class="fab fa-instagram"></i></a>
+               </div>
+               
+               <style>
+                /* Contenedor de las redes sociales */
+                .social-media {
+                    display: flex;
+                    gap: 15px; /* Espaciado entre los botones */
+                    justify-content: center; /* Centrado horizontal */
+                    align-items: center; /* Centrado vertical */
+                    margin-top: 20px; /* Ajuste opcional */
+                }
+                
+                /* Estilos para cada botón */
+                .social-media .social-icon {
+                    background-color: #0b6059 !important; /* Fondo verde exacto */
+                    color: white !important; /* Color blanco para los íconos */
+                    font-size: 24px; /* Tamaño de los íconos */
+                    width: 50px; /* Ancho del botón */
+                    height: 50px; /* Alto del botón */
+                    display: flex;
+                    justify-content: center; /* Centrado horizontal del ícono */
+                    align-items: center; /* Centrado vertical del ícono */
+                    border-radius: 50%; /* Forma circular */
+                    transition: all 0.3s ease; /* Transición suave */
+                    text-decoration: none !important; /* Quitar subrayado */
+                    border: none; /* Elimina bordes adicionales */
+                }
+                
+                /* Estilo hover para los botones */
+                .social-media .social-icon:hover {
+                    background-color: #064e46 !important; /* Fondo más oscuro al pasar el cursor */
+                    color: #ffffff !important; /* Mantiene el ícono blanco */
+                    transform: scale(1.1); /* Efecto de aumento */
+                }
+                </style>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /.container -->
+    <!-- Go To Top Link -->
+    <div class="page-scroll hidden-sm hidden-xs">
+       <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    </div>
+ </div>
+ <!-- /credits -->
+</footer>
 <!-- Scripts -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
