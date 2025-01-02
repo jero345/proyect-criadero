@@ -11,11 +11,15 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-4o5D6CEWZaDQJkU5fCjgxFhEN5cs0QcSy3DUzXFs5BNIlDNGSTzwhmnqgBO1evEZKYOe2EF44taVpPci0Pto/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/style.css" rel="stylesheet">
-     <!-- Favicons-->
-     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-     <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+     <!-- Color Style CSS -->
      <link rel="shortcut icon" href="./img/logo pnsa.png" type="image/x-icon">
+     <link href="styles/maincolors.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-4o5D6CEWZaDQJkU5fCjgxFhEN5cs0QcSy3DUzXFs5BNIlDNGSTzwhmnqgBO1evEZKYOe2EF44taVpPci0Pto/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+ >
+
 </head>
 <!-- Preloader -->
 <div id="preloader">
@@ -265,6 +269,16 @@
                 En King Dog, contamos con una amplia selección de razas, desde pequeñas como Pomerania, Yorkshire Terrier y Shih Tzu, hasta medianas y grandes como Golden Retriever, Bulldog Francés, Labrador y Husky Siberiano.
             </div>
         </div>
+    <div class="accordion-container">
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                ¿Qué razas de cachorros están disponibles en King Dog?
+            </div>
+            <div class="accordion-content">
+                En King Dog, contamos con una amplia selección de razas, desde pequeñas como Pomerania, Yorkshire Terrier y Shih Tzu, hasta medianas y grandes como Golden Retriever, Bulldog Francés, Labrador y Husky Siberiano.
+            </div>
+        </div>
 
         <!-- Pregunta 2 -->
         <div class="accordion-item">
@@ -299,20 +313,72 @@ Incluye un historial de vacunación y desparasitación, confirmando que el cacho
         </div>
     </div>
 
-    <script>
-        function toggleAccordion(header) {
-            const item = header.parentNode; // Obtener el elemento padre (accordion-item)
+       <!-- Pregunta 4 -->
+       <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            ¿Hacen envíos a otras ciudades?
 
-            // Cerrar otros acordeones
-            document.querySelectorAll('.accordion-item').forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
+        </div>
+        <div class="accordion-content">
+           
+            ¡Claro que sí! Realizamos envíos seguros a todas las principales ciudades de Colombia, incluyendo:
+            Bogotá, Medellín, Cali, Barranquilla, Bucaramanga, Cartagena, Pereira, Manizales, Ibagué y Cúcuta.
+            Garantizamos que el cachorro llegará en óptimas condiciones a su nuevo hogar.
+            
+        </div>
+    </div>
+</div>
+  <!-- Pregunta 5 -->
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+        ¿Qué métodos de pago aceptan?
+
+
+    </div>
+    <div class="accordion-content">
+       
+        Aceptamos transferencias bancarias, pagos en efectivo y pagos contra entrega. Contáctanos para coordinar el método más cómodo para ti.
+
+    </div>
+</div>
+</div>
+</div>
+<!-- Pregunta 5 -->
+<div class="accordion-item">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    ¿Cuánto tiempo tarda la entrega del cachorro?
+
+
+  </div>
+  <div class="accordion-content">
+     
+     
+La entrega toma entre 1 y 2 días hábiles, dependiendo de la ciudad de destino.
+
+
+  </div>
+</div>
+</div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', () => {
+            // Cierra otros acordeones abiertos
+            document.querySelectorAll('.accordion-item.active').forEach(activeItem => {
+                if (activeItem !== item) {
+                    activeItem.classList.remove('active');
                 }
             });
 
-            // Alternar el estado activo del acordeón actual
+            // Alterna el estado del acordeón actual
             item.classList.toggle('active');
-        }
+        });
+    });
+});
     </script>
 </body>
 
