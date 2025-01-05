@@ -24,13 +24,88 @@
       <link href="css/style.css" rel="stylesheet">
       <!-- Plugins CSS -->
       <link rel="stylesheet" href="css/plugins.css">
-      <!-- Color Style CSS -->
-      <link href="styles/maincolors.css" rel="stylesheet">
+     <!-- Color Style CSS -->
+     <link rel="shortcut icon" href="./img/logo pnsa.png" type="image/x-icon">
+     <link href="styles/maincolors.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-4o5D6CEWZaDQJkU5fCjgxFhEN5cs0QcSy3DUzXFs5BNIlDNGSTzwhmnqgBO1evEZKYOe2EF44taVpPci0Pto/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+ >
+
       <!-- Favicons-->
       <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
       <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
    </head>
+   <style>
+    /* Botón de WhatsApp */
+    .btn-whatsapp {
+        position: fixed;
+        z-index: 999;
+        bottom: 17vh; /* Ajustado para que esté encima del botón de subir */
+        right: 20px;
+    }
+
+    .btn-whatsapp:before,
+    .btn-whatsapp:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #00e676;
+        opacity: 0;
+        animation: onda 1.7s infinite;
+    }
+
+    .btn-whatsapp:before {
+        animation-delay: 1s;
+    }
+
+    .btn-whatsapp:after {
+        animation-delay: 1.3s;
+    }
+
+    .btn-whatsapp img {
+   
+        z-index: 2;
+    }
+
+    @keyframes onda {
+        0% {
+            transform: scale(1);
+        }
+
+        15% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(2.5);
+        }
+    }
+
+</style>
+</head>
+<body>
+<!-- Botón de WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=573052583835&text=Hola%20Bocaditos%20T%26T%2C%20quiero%20hacer%20mi%20pedido!" class="btn-whatsapp">
+    <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+</a>
+
+<!-- Botón de subir -->
+<div class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <img src="./img/icon-up.svg" alt="Subir">
+</div>
+</body>
+<body>
+<a href="https://api.whatsapp.com/send?phone=573052583835&text=Hola%20Bocaditos%20T%26T%2C%20quiero%20hacer%20mi%20pedido!" class="btn-whatsapp">
+    <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+</a>
+</body>
    <body id="page-top">
       <!-- Preloader -->
       <div id="preloader">
@@ -99,6 +174,16 @@
                      <img src="img/logo pnsa.png" class="img-responsive" alt="Logo">
                  </a>
              </div>
+             <button 
+             class="navbar-toggler ms-auto" 
+             style="background-color: transparent; border: none;" 
+             type="button" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbar"
+         >
+             <i class="fas fa-bars" style="color: #fff; font-size: 1.5rem;"></i>
+         </button>
+
      
              <!-- Menú hamburguesa -->
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -120,19 +205,25 @@
                      </li>
                  </ul>
      
-                 <!-- Iconos de redes sociales -->
-                 <div class="social-icons">
-                  <a href="https://twitter.com" title="Twitter" target="_blank">
-                      <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="https://facebook.com" title="Facebook" target="_blank">
-                      <i class="fab fa-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram" target="_blank">
-                      <i class="fab fa-instagram"></i>
-                  </a>
-              </div>
+                <!-- Iconos de redes sociales -->
+<div class="social-icons">
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@criadero_kingdog?_t=8sHSJ01SHeY&_r=1" title="TikTok" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title="Facebook" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
          </div>
+
      </nav>
       <!-- /navbar ends -->
       <!-- Section Adoption -->
@@ -171,7 +262,7 @@
                          </button>
                          <div class="accordion-content">
                              <p>
-                                 1 Tamaño y peso:
+                                <u> 1 Tamaño y peso:</u>
                                  El Pinscher es una raza pequeña, que generalmente pesa entre 3 y 5 kg, lo que lo convierte en un excelente compañero para quienes viven en apartamentos o viviendas con espacios reducidos.
                                  Su pequeño tamaño no le resta energía; de hecho, el Pinscher es muy activo y necesita ejercicio regular, por lo que es ideal tanto para familias como para personas solteras que disfrutan de paseos al aire libre.
                                  
@@ -179,13 +270,13 @@
 
                                  
                                  <br><br>
-                                 2 Personalidad destacada:
+                                 <u>2 Personalidad destacada:</u>
                                  El Pinscher es conocido por su carácter intrépido y vigilante. Siempre alerta y protector, es un excelente perro guardián, aunque en un entorno familiar, su lealtad y afecto lo hacen un compañero excelente.
                                  Son perros inteligentes, muy fáciles de entrenar, pero requieren socialización desde una edad temprana debido a su naturaleza protectora.
                                  
                                  
                                  <br><br>
-                                 3 Pelaje y mantenimiento:
+                                 <u>3 Pelaje y mantenimiento:</u>
                                  El pelaje del Pinscher es corto, denso y fácil de mantener, lo que facilita el cuidado diario de la raza. Aunque no requiere grandes cuidados en cuanto a peluquería, es importante mantener su piel limpia y saludable.
                                  Su pelaje no tiende a perder mucho pelo, lo que lo convierte en una excelente opción para quienes tienen alergias o prefieren un perro que no deje rastro de pelo por toda la casa.
                                  
@@ -210,21 +301,21 @@
                          </button>
                          <div class="accordion-content">
                            <p>
-                              1 Alimentación:
+                              <u>1 Alimentación:</u>
                               El Pinscher tiene un metabolismo rápido, por lo que necesita una dieta bien balanceada para mantener su nivel de energía. Recomendamos alimentos de alta calidad que le proporcionen los nutrientes adecuados para su tamaño y actividad.
                               En King Dog, ofrecemos asesoría sobre la mejor alimentación para tu Pinscher, asegurando su crecimiento saludable y su bienestar general.
                               
                               
                               
                               <br><br>
-                              2 Ejercicio:
+                             <u>2 Ejercicio:</u> 
                               Aunque el Pinscher es un perro pequeño, es muy activo y necesita una cantidad adecuada de ejercicio diario. Paseos regulares y tiempo de juego son esenciales para mantenerlo saludable y feliz.
                               Esta raza es perfecta para quienes disfrutan de actividades al aire libre y pueden ofrecerle el ejercicio que necesita.
                               
                               
                               
                               <br><br>
-                              3 Salud y cuidados:
+                             <u>3 Salud y cuidados:</u> 
                               Como todos los cachorros de King Dog, el Pinscher recibe un certificado de salud que garantiza que está libre de enfermedades y ha sido debidamente vacunado y desparasitado.
                               Su tamaño pequeño hace que sea un perro fácil de cuidar, pero es importante seguir con un control adecuado de su salud para asegurarse de que se mantenga fuerte y activo durante toda su vida.
                               
@@ -247,11 +338,21 @@
                          </button>
                          <div class="accordion-content">
                              <p>En King Dog, somos tu criadero de perros en Colombia especializado en la venta de Pinscher de raza pura. Con más de 14 años de experiencia, ofrecemos cachorros saludables y bien cuidados, listos para convertirse en parte de tu familia:
-                                Certificación de pureza de raza con garantía de por vida: Todos nuestros Pinscher tienen un certificado de pureza que asegura que son perros de raza pura.
-                                Salud garantizada: Cada Pinscher viene con su carnet de vacunación actualizado y certificado de salud, lo que te brinda confianza y tranquilidad al hacer tu compra.
-                                Asesoría personalizada: Te ofrecemos recomendaciones sobre la mejor manera de cuidar y educar a tu Pinscher, para que crezca feliz y saludable.
-                                Entrega segura en todo el país: Realizamos entregas en ciudades como Bogotá, Medellín, Cali, y más, garantizando que tu Pinscher llegue en perfectas condiciones a tu hogar.
-                                Precio Pinscher: Consulta nuestros precios de Pinscher y opciones de pago, asegurando que puedas adquirir un cachorro de calidad a un precio competitivo en el mercado colombiano.
+                               <br><br>
+                                <u>Certificación de pureza de raza con garantía de por vida:</u>
+                                Todos nuestros Pinscher tienen un certificado de pureza que asegura que son perros de raza pura.
+                                <br><br>
+                                <u>Salud garantizada:</u> 
+                                 Cada Pinscher viene con su carnet de vacunación actualizado y certificado de salud, lo que te brinda confianza y tranquilidad al hacer tu compra.
+                                 <br><br>
+                                 <u>Asesoría personalizada:</u> 
+                                 Te ofrecemos recomendaciones sobre la mejor manera de cuidar y educar a tu Pinscher, para que crezca feliz y saludable.
+                                 <br><br>
+                                 <u>Entrega segura en todo el país:</u> 
+                                 Realizamos entregas en ciudades como Bogotá, Medellín, Cali, y más, garantizando que tu Pinscher llegue en perfectas condiciones a tu hogar.
+                                 <br><br>
+                                 <u>Precio Pinscher:</u> 
+                                 Consulta nuestros precios de Pinscher y opciones de pago, asegurando que puedas adquirir un cachorro de calidad a un precio competitivo en el mercado colombiano.
                                 
                                 
                               </p>
@@ -353,43 +454,80 @@
       </section>
       <!-- /Section ends -->
       <!-- Footer -->		
-      <footer>
-         <!-- Contact info -->
-         <div class="container">
+     <!-- Footer -->		
+     <footer>
+        <!-- Contact info -->
+        <div class="container">
             <div class="row">
-               <div class="col-lg-4 text-center">
-                  <!-- Footer logo -->
-                  <img src="img/logo footer.png" alt="" class="center-block img-responsive">
-               </div>
-               <!-- /.col-lg-4 -->
-               <div class="col-lg-4 text-center res-margin">
-                  <ul class="list-unstyled">
-                     <li><i class="fa fa-phone"></i>(000) 000-000</li>
-                     <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">site@email.com</a></li>
-                     <li><i class="fa fa-map-marker"></i>123 Anywhere Street, London, LO4 6ON</li>
-                  </ul>
-               </div>
-               <!-- /.col-lg-4 -->
-               <div class="col-lg-4 text-center res-margin">
-                  <h5>Siguenos</h5>
-                  <!--Social icons -->
-                  <div class="social-media">
-                     <a href="#" title=""><i class="fab fa-twitter"></i></a>
-                     <a href="#" title=""><i class="fab fa-facebook"></i></a>
-                     <a href="#" title=""><i class="fab fa-instagram"></i></a>
-                  </div>
-               </div>
-               <!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center">
+                    <!-- Footer logo -->
+                    <img src="img/logo footer.png" alt="cachorros" class="center-block img-responsive" style="max-width: 150px;">
+    
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center res-margin">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone"></i>3217543836</li>
+                        <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">Criaderokingdog@gmail.com</a></li>
+                        <li><i class="fa fa-map-marker"></i>Oriente Medellin</li>
+                    </ul>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center res-margin">
+                    <h5>Siguenos</h5>
+                    <div class="social-media">
+                       <a href="https://www.tiktok.com/@criadero_kingdog?_t=8sHSJ01SHeY&_r=1" title="TikTok" target="_blank">
+                           <i class="fab fa-tiktok"></i>
+                       </a>
+                       <a href="https://www.facebook.com/profile.php?id=100054907174024&mibextid=wwXIfr&rdid=DlAL1bXmJhefOqjd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189WLAMMSu%2F%3Fmibextid%3DwwXIfr" title="Facebook"><i class="fab fa-facebook"></i></a>
+                       <a href="https://www.instagram.com/kingdog_colombia/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                   </div>
+                   
+                   <style>
+                    /* Contenedor de las redes sociales */
+                    .social-media {
+                        display: flex;
+                        gap: 15px; /* Espaciado entre los botones */
+                        justify-content: center; /* Centrado horizontal */
+                        align-items: center; /* Centrado vertical */
+                        margin-top: 20px; /* Ajuste opcional */
+                    }
+                    
+                    /* Estilos para cada botón */
+                    .social-media .social-icon {
+                        background-color: #0b6059 !important; /* Fondo verde exacto */
+                        color: white !important; /* Color blanco para los íconos */
+                        font-size: 24px; /* Tamaño de los íconos */
+                        width: 50px; /* Ancho del botón */
+                        height: 50px; /* Alto del botón */
+                        display: flex;
+                        justify-content: center; /* Centrado horizontal del ícono */
+                        align-items: center; /* Centrado vertical del ícono */
+                        border-radius: 50%; /* Forma circular */
+                        transition: all 0.3s ease; /* Transición suave */
+                        text-decoration: none !important; /* Quitar subrayado */
+                        border: none; /* Elimina bordes adicionales */
+                    }
+                    
+                    /* Estilo hover para los botones */
+                    .social-media .social-icon:hover {
+                        background-color: #064e46 !important; /* Fondo más oscuro al pasar el cursor */
+                        color: #ffffff !important; /* Mantiene el ícono blanco */
+                        transform: scale(1.1); /* Efecto de aumento */
+                    }
+                    </style>
+                <!-- /.col-lg-4 -->
             </div>
             <!-- /row -->
-         </div>
-         <!-- /.container -->
-         <!-- Credits-->
-               <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-            </div>
-         </div>
-         <!-- /credits -->
-      </footer>
+        </div>
+        <!-- /.container -->
+        <!-- Go To Top Link -->
+        <div class="page-scroll hidden-sm hidden-xs">
+           <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+        </div>
+     </div>
+     <!-- /credits -->
+    </footer>
       <!-- /footer ends -->
       <!-- Core JavaScript Files -->
       <script src="vendor/jquery/jquery.min.js"></script>

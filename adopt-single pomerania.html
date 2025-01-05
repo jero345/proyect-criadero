@@ -32,8 +32,80 @@
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
  >
- 
+
+      <!-- Favicons-->
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
    </head>
+   <style>
+    /* Botón de WhatsApp */
+    .btn-whatsapp {
+        position: fixed;
+        z-index: 999;
+        bottom: 17vh; /* Ajustado para que esté encima del botón de subir */
+        right: 20px;
+    }
+
+    .btn-whatsapp:before,
+    .btn-whatsapp:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #00e676;
+        opacity: 0;
+        animation: onda 1.7s infinite;
+    }
+
+    .btn-whatsapp:before {
+        animation-delay: 1s;
+    }
+
+    .btn-whatsapp:after {
+        animation-delay: 1.3s;
+    }
+
+    .btn-whatsapp img {
+   
+        z-index: 2;
+    }
+
+    @keyframes onda {
+        0% {
+            transform: scale(1);
+        }
+
+        15% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(2.5);
+        }
+    }
+
+</style>
+</head>
+<body>
+<!-- Botón de WhatsApp -->
+<a href="https://api.whatsapp.com/send/?phone=573217543836&text&type=phone_number&app_absent=0" class="btn-whatsapp">
+    <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+</a>
+
+<!-- Botón de subir -->
+<div class="btn-subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <img src="./img/icon-up.svg" alt="Subir">
+</div>
+</body>
+<body>
+<a href="https://api.whatsapp.com/send/?phone=573217543836&text&type=phone_number&app_absent=0" class="btn-whatsapp">
+    <img src="./img/icon-whatsapp.svg" alt="Contactar por WhatsApp">
+</a>
+</body>
    <body id="page-top">
       <!-- Preloader -->
       <div id="preloader">
@@ -98,13 +170,21 @@
          <div class="container">
              <!-- Logo -->
              <div class="navbar-brand navbar-brand-centered page-scroll">
-                 <a href="index-layerslider2.html">
+                 <a href="index.html">
                      <img src="img/logo pnsa.png" class="img-responsive" alt="Logo">
                  </a>
              </div>
      
-             <!-- Menú hamburguesa -->
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"></button>
+             <button 
+             class="navbar-toggler ms-auto" 
+             style="background-color: transparent; border: none;" 
+             type="button" 
+             data-bs-toggle="collapse" 
+             data-bs-target="#navbar"
+         >
+             <i class="fas fa-bars" style="color: #fff; font-size: 1.5rem;"></i>
+         </button>
+
      
              <!-- Menú de navegación -->
              <div class="collapse navbar-collapse" id="navbar">
@@ -141,6 +221,7 @@
     </a>
 </div>
          </div>
+
      </nav>
       <!-- /navbar ends -->
       <!-- Section Adoption -->
@@ -154,6 +235,7 @@
             <ul class="breadcrumb adopt">
                <li><a href="adoption.html">Adoption Gallery</a> <span class="divider"></span></li>
                <li class="active">Pet Name</li>
+               <p></p>
             </ul>
          </div>
          <div class="container margin1">
@@ -163,84 +245,121 @@
                </div>
                <div class="col-lg-7 res-margin">
                   <h2>Pomerania</h2>
-                  <p>El Pomerania es una de las razas más adoradas, especialmente por su tamaño compacto, su pelaje exuberante y su personalidad vivaz. En King Dog, tu criadero de perros en Colombia, nos especializamos en la venta de cachorros Pomerania de raza pura, con certificación de pureza y una garantía de salud que te brinda total confianza. Si buscas Pomerania en venta en Colombia, esta raza es perfecta para quienes desean un perro pequeño, pero con mucha energía y carácter. Además, te ofrecemos detalles sobre el precio de un Pomerania, para que puedas conocer todo lo relacionado con esta hermosa raza..
-
+                  <p>El Pomerania es una de las razas más adoradas, especialmente por su tamaño compacto, su pelaje exuberante y su personalidad vivaz. En King Dog, tu criadero de perros en Colombia, nos especializamos en la venta de cachorros Pomerania de raza pura, con certificación de pureza y una garantía de salud que te brinda total confianza. Si buscas Pomerania en venta en Colombia, esta raza es perfecta para quienes desean un perro pequeño, pero con mucha energía y carácter. Además, te ofrecemos detalles sobre el precio de un Pomerania, para que puedas conocer todo lo relacionado con esta hermosa raza.
                   </p>
                   <div class="accordion">
                      <!-- Item 1 -->
                      <div class="accordion-item">
                          <button class="accordion-header">
-                             <span>Características Principales del Pomerania</span>
+                             <span>Características Principales del Pomerania
+                            </span>
                              <span class="accordion-icon">&#9660;</span> <!-- Flecha hacia abajo -->
                          </button>
                          <div class="accordion-content">
                              <p>
-                               <u> 1 Tamaño y peso: </u>
-                                El Pomerania es un perro pequeño 
-                                 , con un peso que oscila entre los 1.5 y 3.5 kg.
-                                 Es ideal para personas que viven en apartamentos o casas pequeñas, ya que su tamaño compacto se adapta
-                                 perfectamente a espacios reducidos. Perfecto para hogares en ciudades como Bogotá, Medellín, Cali o cualquier
-                                 otra área urbana de Colombia.
+                                 <u>1.Tamaño y peso:</u>
+                                 Los Huskies Siberianos son amigables, sociables y juguetones, lo que los hace ideales para familias y dueños activos.
+                                 Su espíritu libre e inteligencia destacan, aunque requieren un dueño con experiencia para su adiestramiento.
+                                 
+                                 
+                                 
                                  <br><br>
-                                <u>2 Personalidad destacada:</u>  El Pomerania es conocido por su personalidad extrovertida y su gran confianza. Aunque es pequeño,
-                                 no tiene miedo de hacer notar su presencia. Es una raza leal, afectuosa y enérgica, que disfruta de la compañía
-                                 de sus dueños y se adapta bien a diferentes estilos de vida, haciendo de él un excelente compañero para todas las edades.
+                                 <u>2 Personalidad destacada:</u>
+                                 El Pomerania es conocido por su personalidad extrovertida y su gran confianza. Aunque es pequeño, no tiene miedo de hacer notar su presencia.
+                                 Es una raza leal, afectuosa y enérgica, que disfruta de la compañía de sus dueños y se adapta bien a diferentes estilos de vida, haciendo de él un excelente compañero para todas las edades.
+                                 
+                                 
+                                 
+                                 
+                                 
                                  <br><br>
-                                  <u>3 Pelaje y mantenimiento: </u>
-                                  El Pomerania tiene un pelaje denso y esponjoso que requiere cuidado regular. Necesita ser cepillado
-                                 varias veces a la semana para evitar enredos y mantener su pelaje brillante. El cuidado adecuado de su pelaje y su higiene
-                                 son esenciales para mantener a tu Pomerania de raza pura saludable y bien presentado.
+                                <u>3 Pelaje y mantenimiento:</u> 
+                                El Pomerania tiene un pelaje denso y esponjoso que requiere cuidado regular. Necesita ser cepillado varias veces a la semana para evitar enredos y mantener su pelaje brillante.
+                                El cuidado adecuado de su pelaje y su higiene son esenciales para mantener a tu Pomerania de raza pura saludable y bien presentado.
+                                
+
                                  <br><br>
                              </p>
                          </div>
                      </div>
+                 
                      <!-- Item 2 -->
                      <div class="accordion-item">
                          <button class="accordion-header">
                              <span>Cuidados Especiales para el Pomerania
+
+
+
                            </span>
                              <span class="accordion-icon">&#9660;</span>
                          </button>
                          <div class="accordion-content">
                            <p>
                              <u>1 Alimentación:</u> 
-                              Debido a su pequeño tamaño, el Pomerania requiere una dieta balanceada y adecuada a su tamaño para evitar problemas de sobrepeso.
+                             Debido a su pequeño tamaño, el Pomerania requiere una dieta balanceada y adecuada a su tamaño para evitar problemas de sobrepeso.
+
+
                               
                               <br><br>
-                             <u>2 Ejercicio:</u> 
-                              Aunque es pequeño, el Pomerania tiene mucha energía. Necesita realizar ejercicios y paseos diarios para liberar su energía y mantener una buena salud.
-                              Es recomendable jugar con él en espacios cerrados o al aire libre, adaptándose tanto a casas como a apartamentos en zonas como Medellín, Cali y otras grandes ciudades.
+                            <u>2 Ejercicio:</u>  
+                            Aunque es pequeño, el Pomerania tiene mucha energía. Necesita realizar ejercicios y paseos diarios para liberar su energía y mantener una buena salud.
+                            Es recomendable jugar con él en espacios cerrados o al aire libre, adaptándose tanto a casas como a apartamentos en zonas como Medellín, Cali y otras grandes ciudades.
+                            
+                            
+                            
+                            
                               
                               <br><br>
-                             <u>3 Salud y cuidados:</u> 
-Al igual que todos nuestros cachorros, los Pomerania en King Dog incluyen su carnet de vacunación al día, desparasitación y garantía de salud.
-Dado que su pequeño tamaño puede llevar a algunos problemas dentales, es importante prestar atención a su higiene bucal.
+                            <u>3 Salud y cuidados:</u>  
+                            Al igual que todos nuestros cachorros, los Pomerania en King Dog incluyen su carnet de vacunación al día, desparasitación y garantía de salud.
+                            Dado que su pequeño tamaño puede llevar a algunos problemas dentales, es importante prestar atención a su higiene bucal.
+                            
+                            
+                            
+                            
 
                               <br><br>
                           </p>
                          </div>
                      </div>
+                 
                      <!-- Item 3 -->
                      <div class="accordion-item">
                          <button class="accordion-header">
                              <span>¿Por Qué Elegir un Pomerania de King Dog?
+
+
+
 </span>
                              <span class="accordion-icon">&#9660;</span>
                          </button>
                          <div class="accordion-content">
                              <p>En King Dog, nos especializamos en la venta de Pomerania de raza pura, y garantizamos que todos nuestros cachorros son criados con los más altos estándares para asegurar tu satisfacción. Además, te ofrecemos precios accesibles para Pomerania, con opciones claras para que puedas elegir el mejor cachorro para tu hogar:
-                             <br><br>
-                                <u>Certificación de pureza de raza con garantía de por vida: </u>
-                              Cada Pomerania de King Dog es garantizada como de raza pura, con un certificado de pureza que asegura su linaje.
+
                               <br><br>
-                              <u>Salud garantizada:</u>
-                               Todos nuestros cachorros vienen con un esquema de vacunación completo, desparasitación y certificado de salud, para que no tengas preocupaciones sobre su bienestar.
-                               <br><br>                           
-                               <u>Asesoría personalizada:</u>  Ofrecemos asesoría continua desde el momento de la compra, incluyendo recomendaciones sobre su alimentación y cuidados 
+                                <u> Garantía de pureza de raza: </u>
+                                Cada Pomerania de King Dog es garantizada como de raza pura, con un certificado de pureza que asegura su linaje.
+
+                                <br><br>
+                                <u>Garantía de salud: </u>
+                                Todos nuestros cachorros vienen con un esquema de vacunación completo, desparasitación y certificado de salud, para que no tengas preocupaciones sobre su bienestar.
+                                <br><br>
+                                <u>Kit de bienvenida:</u>  
+                                 Incluye artículos esenciales como alimento, cobija, collar y depósito de alimento, para hacer la transición más fácil.
+                                 <br><br>
+                                 <u>Asesoría personalizada:</u>
+                                 Ofrecemos asesoría continua desde el momento de la compra, incluyendo recomendaciones sobre su alimentación y cuidados 
+
+                                 <br><br>
+                                 <u>Envíos a nivel nacional: </u> 
+                                 Realizamos entregas en todo el país, incluyendo ciudades como Bogotá, Medellín, Cali y más, asegurando que tu nuevo compañero llegue a tu hogar en perfectas condiciones.
                                <br><br>
-                               <u>Entrega nacional segura:</u>  Realizamos entregas en todo el país, incluyendo ciudades como Bogotá, Medellín, Cali y más, asegurando que tu nuevo compañero llegue a tu hogar en perfectas condiciones.
-                               <br><br>
-                               <u>Precio Pomerania:</u> Consulta con nosotros para conocer el precio del Pomerania y nuestras opciones de pago, garantizando la mejor oferta para un cachorro de calidad.
+                                 <u>Precio Pomerania:</u> 
+                                 Consulta con nosotros para conocer el precio del Pomerania y nuestras opciones de pago, garantizando la mejor oferta para un cachorro de calidad.
+
+                                
+                                
+                              </p>
                          </div>
                      </div>
                  </div>
@@ -339,8 +458,8 @@ Dado que su pequeño tamaño puede llevar a algunos problemas dentales, es impor
       </section>
       <!-- /Section ends -->
       <!-- Footer -->		
-      <!-- Footer -->		
-      <footer>
+       <!-- Footer -->		
+       <footer>
         <!-- Contact info -->
         <div class="container">
             <div class="row">
